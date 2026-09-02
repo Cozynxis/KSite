@@ -1,1 +1,169 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz — KSite</title><link rel="stylesheet" href="assets/css/style.css"></head><body data-page="quiz"><div class="noise"></div><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span><small>beta</small></a><nav class="desktop-nav"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a class="active" href="quiz.html">Quiz</a><a href="plus.html">Plus</a></nav><div class="nav-actions"><button class="icon-btn" id="themeBtn">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a><a href="profiel.html">Profiel</a></div><main><section class="page-hero wrap reveal"><span class="kicker">Kennischeck</span><h1>Hoeveel weet jij al?</h1><p>8 vragen over huid, zenuwen, hersenen, reflexen en toestemming. Goede antwoorden leveren XP op.</p></section><section class="wrap"><div class="quiz-shell reveal" id="quizShell"></div></section></main><footer><div class="wrap footer-bottom"><span>© 2026 KSite</span><span>Quizresultaten worden alleen lokaal opgeslagen</span></div></footer><div class="toast" id="toast"></div><script src="assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test je kennis over tast, zenuwen, hersenen, reflexen en grenzen met de interactieve KSite quiz.">
+    <title>KSite — Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="quiz">
+    <div class="page-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span class="brand-copy"><strong>KSite</strong><small>Kennis • Tast • Reflexen</small></span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="ontdek.html">Ontdek</a>
+            <a href="lessen.html">Lessen</a>
+            <a class="active" href="quiz.html">Quiz</a>
+            <a href="plus.html">Plus</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeBtn" type="button">◐</button>
+            <a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a>
+            <button class="menu-btn" id="menuBtn" type="button">☰</button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="ontdek.html">Ontdek</a>
+        <a href="lessen.html">Lessen</a>
+        <a class="active" href="quiz.html">Quiz</a>
+        <a href="plus.html">Plus</a>
+        <a href="profiel.html">Profiel</a>
+    </nav>
+
+    <main>
+        <section class="page-hero container reveal">
+            <div class="breadcrumbs"><a href="index.html">Home</a><span>/</span><span>Quiz</span></div>
+            <span class="eyebrow">KENNISTEST</span>
+            <h1>Hoeveel weet jij al over <span class="gradient-text">tast?</span></h1>
+            <p class="page-lead">Beantwoord acht vragen. Na ieder antwoord krijg je uitleg en aan het einde verdien je XP.</p>
+        </section>
+
+        <section class="section compact container reveal">
+            <div class="quiz-shell">
+                <article class="quiz-card" id="quizMainCard">
+                    <div class="quiz-progress-head">
+                        <span id="quizProgressText">Vraag 1 van 8</span>
+                        <span><strong id="quizLiveScore">0</strong> goed</span>
+                    </div>
+                    <div class="progress-track"><span id="quizProgressBar" style="width:12.5%"></span></div>
+                    <h2 class="question-title" id="questionTitle">Quiz wordt geladen…</h2>
+                    <div class="answer-list" id="answerList"></div>
+                    <div class="notice mt-24 hidden" id="quizExplanation"></div>
+                    <button class="btn primary mt-24 hidden" id="quizNextBtn" type="button">Volgende vraag</button>
+                </article>
+
+                <aside class="quiz-sidebar">
+                    <article class="dashboard-card">
+                        <span class="eyebrow">BESTE SCORE</span>
+                        <div class="metric-value" id="quizBest">0%</div>
+                        <p>Je hoogste score op deze browser.</p>
+                    </article>
+                    <article class="dashboard-card">
+                        <span class="eyebrow">POGINGEN</span>
+                        <div class="metric-value" id="quizRuns">0</div>
+                        <p>Hoe vaak je de complete quiz hebt afgerond.</p>
+                    </article>
+                    <article class="dashboard-card">
+                        <span class="eyebrow">BELONING</span>
+                        <div class="metric-value">10 XP</div>
+                        <p>Per goed antwoord na het afronden van de quiz.</p>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div><span class="eyebrow">ONDERWERPEN</span><h2>Wat komt er in de quiz terug?</h2></div>
+                <p>De vragen zijn gebaseerd op de gratis KSite-modules en algemene uitleg uit de kennisbank.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card"><span class="feature-icon">◎</span><h3>Receptoren</h3><p>Hoe mechanische prikkels in de huid worden geregistreerd.</p></article>
+                <article class="feature-card"><span class="feature-icon">↝</span><h3>Zenuwen</h3><p>Hoe signalen verder worden geleid richting centrale verwerking.</p></article>
+                <article class="feature-card"><span class="feature-icon">◇</span><h3>Hersenen</h3><p>Hoe verwachting, aandacht en context invloed kunnen hebben.</p></article>
+                <article class="feature-card"><span class="feature-icon">♡</span><h3>Grenzen</h3><p>Waarom automatische reacties nooit hetzelfde zijn als toestemming.</p></article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="split-layout">
+                <article class="content-card large-card">
+                    <span class="eyebrow">SLIM LEREN</span>
+                    <h2>Een fout antwoord is juist nuttig</h2>
+                    <p>De quiz is niet alleen bedoeld om een score te halen. Bij ieder antwoord wordt uitgelegd waarom het juiste antwoord klopt.</p>
+                    <p>Wanneer je een vraag fout hebt, kun je daarna teruggaan naar de lessen of kennisbank en precies dat onderwerp opnieuw bekijken.</p>
+                    <p>Door uitleg en herhaling te combineren blijft kennis meestal beter hangen dan wanneer je alleen antwoorden uit je hoofd leert.</p>
+                </article>
+                <aside class="fact-stack">
+                    <article class="mini-card"><span class="mini-label">TIP</span><h3>Lees de uitleg</h3><p>Klik niet direct door; de feedback na iedere vraag bevat de belangrijkste kerninformatie.</p></article>
+                    <article class="mini-card"><span class="mini-label">TIP</span><h3>Probeer opnieuw</h3><p>Je beste score blijft lokaal bewaard, dus je kunt jezelf later opnieuw testen.</p></article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div><span class="eyebrow">VOORBEREIDING</span><h2>Vier dingen om te onthouden</h2></div>
+            </div>
+            <div class="timeline-grid">
+                <article class="timeline-step"><span class="step-number">01</span><h3>Tast is een systeem</h3><p>Meerdere receptoren en zenuwbanen dragen samen informatie over aanraking.</p></article>
+                <article class="timeline-step"><span class="step-number">02</span><h3>Je brein interpreteert</h3><p>Zintuiglijke informatie wordt gecombineerd met verwachting, aandacht en context.</p></article>
+                <article class="timeline-step"><span class="step-number">03</span><h3>Mensen verschillen</h3><p>Er is geen universeel gevoeligheidspatroon dat bij iedereen exact hetzelfde is.</p></article>
+                <article class="timeline-step"><span class="step-number">04</span><h3>Grenzen zijn duidelijk</h3><p>Een nee- of stopsignaal betekent stoppen, ongeacht automatische reacties.</p></article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="respect-banner">
+                <div>
+                    <span class="eyebrow">QUIZREGEL</span>
+                    <h2>Geen tijdsdruk</h2>
+                    <p>De quiz heeft bewust geen timer. KSite draait om begrijpen en leren, niet om zo snel mogelijk klikken.</p>
+                </div>
+                <a class="btn secondary" href="lessen.html">Bekijk eerst de lessen</a>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="faq-grid">
+                <details class="faq-card"><summary>Hoeveel vragen zijn er?</summary><p>De huidige basisquiz bevat acht vragen uit verschillende onderwerpen.</p></details>
+                <details class="faq-card"><summary>Hoe verdien ik XP?</summary><p>Na afloop krijg je tien XP voor ieder goed antwoord.</p></details>
+                <details class="faq-card"><summary>Waar wordt mijn score opgeslagen?</summary><p>Alleen lokaal in de browser via localStorage.</p></details>
+                <details class="faq-card"><summary>Kan ik opnieuw beginnen?</summary><p>Ja. Na de uitslag verschijnt een knop waarmee je de quiz opnieuw kunt starten.</p></details>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="cta-panel">
+                <div><span class="eyebrow">NA DE QUIZ</span><h2>Bekijk hoe je profiel groeit.</h2><p>Je XP, beste quizscore en voortgang verschijnen automatisch in je profiel.</p></div>
+                <div class="cta-actions"><a class="btn primary" href="profiel.html">Open profiel</a><a class="btn secondary" href="ontdek.html">Kennisbank</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite</strong><small>Educatief platform</small></span></a><p>Interactief leren over tast en het zenuwstelsel.</p></div>
+            <div class="footer-column"><strong>Leren</strong><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a></div>
+            <div class="footer-column"><strong>Account</strong><a href="profiel.html">Profiel</a><a href="plus.html">Plus</a><a href="plus-dashboard.html">Dashboard</a></div>
+            <div class="footer-column"><strong>Opslag</strong><span>Lokale XP</span><span>Lokale scores</span><span>Geen tracking</span></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 KSite</span><span>Educatieve demo • Geen medisch advies</span></div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
