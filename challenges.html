@@ -1,104 +1,106 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KSite Plus Challenges: zware kennisopdrachten over kietelen, tast, wetenschap, mythes en grenzen.">
-    <title>KSite Plus — Challenges</title>
-    <link rel="stylesheet" href="assets/css/style.css?v=3.1.0">
-    <link rel="stylesheet" href="assets/css/k3.css?v=3.1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KSite Plus IRL Challenge Hub met 50 vrijwillige kietelchallenges, timers, filters, punten en progressie.">
+  <title>KSite Plus — IRL Challenges</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=3.3">
+  <link rel="stylesheet" href="assets/css/challenges.css?v=3.3">
 </head>
 <body data-page="challenges">
-    <div class="page-background" aria-hidden="true"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span></div>
+  <div class="page-background" aria-hidden="true"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Plus</strong><small>IRL Challenge Hub</small></span></a>
+    <nav class="desktop-nav"><a href="index.html">Home</a><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a><a class="active" href="challenges.html">Challenges</a><a href="ai-chat.html">AI Chat</a><a href="plus-dashboard.html">Dashboard</a></nav>
+    <div class="nav-actions"><button class="icon-btn" id="themeBtn" type="button">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn" type="button">☰</button></div>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a><a class="active" href="challenges.html">Challenges</a><a href="ai-chat.html">AI Chat</a><a href="plus-dashboard.html">Dashboard</a></nav>
 
-    <header class="topbar">
-        <a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite</strong><small>Plus Challenges</small></span></a>
-        <nav class="desktop-nav"><a href="index.html">Home</a><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a><a class="active" href="challenges.html">Challenges</a><a href="plus-dashboard.html">Dashboard</a></nav>
-        <div class="nav-actions"><button class="icon-btn" id="themeBtn" type="button">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn" type="button">☰</button></div>
-    </header>
+  <main>
+    <section class="page-hero container reveal">
+      <div class="breadcrumbs"><a href="plus-dashboard.html">Plus Dashboard</a><span>/</span><span>IRL Challenges</span></div>
+      <span class="eyebrow">PLUS ONLY • 50 IRL CHALLENGES</span>
+      <h1>De KSite <span class="gradient-text">IRL Challenge Hub.</span></h1>
+      <p class="page-lead">Echte kietelchallenges met timers, punten, random selectie en moeilijkheidsniveaus. Alle rondes zijn vrijwillig, met normale kleding aan, zonder vasthouden en met directe stopvrijheid.</p>
+      <div class="hero-actions"><button class="btn primary" id="randomChallengeBtn" type="button">🎲 Random challenge</button><a class="btn secondary" href="#regels">Bekijk regels</a></div>
+    </section>
 
-    <nav class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a><a class="active" href="challenges.html">Challenges</a><a href="plus-dashboard.html">Dashboard</a></nav>
+    <section class="section compact container reveal" id="irlGate">
+      <div class="challenge-control-card">
+        <span class="eyebrow">PLUS VEREIST</span>
+        <h2>Activeer KSite Plus om IRL Challenges te openen.</h2>
+        <p class="page-lead">De challengevoortgang wordt lokaal in je browser opgeslagen.</p>
+        <a class="btn primary" href="plus.html">Open KSite Plus</a>
+      </div>
+    </section>
 
-    <main>
-        <section class="page-hero container reveal">
-            <div class="breadcrumbs"><a href="plus-dashboard.html">Plus Dashboard</a><span>/</span><span>Challenges</span></div>
-            <span class="eyebrow">PLUS ONLY • ADVANCED</span>
-            <h1>KSite <span class="gradient-text">Extreme Challenges.</span></h1>
-            <p class="page-lead">Dit zijn de moeilijkste kennisopdrachten van KSite: langere analyses, hoge quizdoelen, bronnen vergelijken en complexe uitleg schrijven. Ze zijn zwaar qua denkwerk, niet qua lichamelijke opdrachten.</p>
-        </section>
-
-        <section class="section compact container reveal" id="challengeGate">
-            <div class="plus-gate-card">
-                <span class="feature-icon">✦</span>
-                <span class="eyebrow">KSITE PLUS</span>
-                <h2>Plus vereist</h2>
-                <p>Activeer de Plus-demo om de Advanced Challenges te openen.</p>
-                <a class="btn primary" href="plus.html">Open KSite Plus</a>
+    <div id="irlContent" class="hidden">
+      <section class="section compact container reveal">
+        <div class="challenge-hero-grid">
+          <article class="challenge-control-card">
+            <span class="eyebrow">JOUW RUN</span>
+            <h3>Challenge progressie</h3>
+            <p>Voltooi challenges, verzamel punten en verdien daarnaast XP voor je gewone KSite-profiel.</p>
+            <div class="challenge-score-row">
+              <div class="challenge-score-box"><strong id="doneCount">0</strong><span>voltooid</span></div>
+              <div class="challenge-score-box"><strong id="pointCount">0</strong><span>punten</span></div>
+              <div class="challenge-score-box"><strong id="remainingCount">50</strong><span>te gaan</span></div>
             </div>
-        </section>
-
-        <div id="challengeContent" class="hidden">
-            <section class="section compact container reveal">
-                <div class="stats-strip">
-                    <article class="stat-card"><strong id="challengeDone">0</strong><span>voltooid</span></article>
-                    <article class="stat-card"><strong id="challengeXp">0 XP</strong><span>challenge XP</span></article>
-                    <article class="stat-card"><strong>12</strong><span>advanced opdrachten</span></article>
-                    <article class="stat-card"><strong>100 XP</strong><span>finale beloning</span></article>
-                </div>
-            </section>
-
-            <section class="section container reveal">
-                <div class="section-heading"><div><span class="eyebrow">LEVEL 1 • HARD</span><h2>Basis onder druk</h2></div><p>Je moet de informatie niet alleen herkennen, maar correct kunnen uitleggen.</p></div>
-                <div class="challenge-grid">
-                    <article class="challenge-card difficulty-hard" data-challenge="terms"><div class="challenge-top"><span class="tag">Hard</span><span class="tag">30 XP</span></div><span class="challenge-number">01</span><h3>Begrippen zonder spiekbrief</h3><p>Leg uit je hoofd knismesis, gargalesis, mechanoreceptor, gewenning en voorspelling uit. Controleer daarna pas de kennishub en verbeter je uitleg.</p><a class="card-link" href="kietelen.html">Controleer theorie →</a><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-hard" data-challenge="route"><div class="challenge-top"><span class="tag">Hard</span><span class="tag">35 XP</span></div><span class="challenge-number">02</span><h3>Route in 8 stappen</h3><p>Maak een schema van minimaal acht stappen van huidprikkel tot bewuste ervaring. Gebruik huid, receptor, zenuw, ruggenmerg, hersenen, aandacht, verwachting en reactie.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-hard" data-challenge="compare"><div class="challenge-top"><span class="tag">Hard</span><span class="tag">40 XP</span></div><span class="challenge-number">03</span><h3>Vergelijkingsmatrix</h3><p>Maak een matrix met knismesis versus gargalesis en vergelijk prikkelsterkte, mogelijke reactie, voorspelbaarheid, lachen en persoonlijke variatie.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                </div>
-            </section>
-
-            <section class="section container reveal">
-                <div class="section-heading"><div><span class="eyebrow">LEVEL 2 • EXPERT</span><h2>Lichaamsgebieden analyseren</h2></div><p>Geen simpele ranglijst: je moet uitleggen waarom zulke ranglijsten beperkt zijn.</p></div>
-                <div class="challenge-grid">
-                    <article class="challenge-card difficulty-hard" data-challenge="zones"><div class="challenge-top"><span class="tag">Expert</span><span class="tag">45 XP</span></div><span class="challenge-number">04</span><h3>12 plekken, 12 verklaringen</h3><p>Bekijk alle 12 gebieden en schrijf per gebied één mogelijke reden waarom lichte aanraking daar opvallend kan zijn. Gebruik geen universele gevoeligheidsscores.</p><a class="card-link" href="plekken.html">Open plekken →</a><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-hard" data-challenge="variation"><div class="challenge-top"><span class="tag">Expert</span><span class="tag">45 XP</span></div><span class="challenge-number">05</span><h3>Variatiemodel</h3><p>Bouw een model met minimaal acht factoren die kunnen verklaren waarom dezelfde persoon op twee momenten anders reageert.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-hard" data-challenge="mythlab"><div class="challenge-top"><span class="tag">Expert</span><span class="tag">50 XP</span></div><span class="challenge-number">06</span><h3>Mythe-laboratorium</h3><p>Maak tien uitspraken over kietelen. Classificeer ze als feit, fabel of te simpel en schrijf bij elk minimaal twee zinnen onderbouwing.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                </div>
-            </section>
-
-            <section class="section container reveal">
-                <div class="section-heading"><div><span class="eyebrow">LEVEL 3 • EXTREME</span><h2>Diepe uitleg</h2></div><p>Hier worden de opdrachten expres lang en streng.</p></div>
-                <div class="challenge-grid">
-                    <article class="challenge-card difficulty-extreme" data-challenge="explain"><div class="challenge-top"><span class="tag">Extreme</span><span class="tag">55 XP</span></div><span class="challenge-number">07</span><h3>500-woorden uitleg</h3><p>Schrijf minimaal 500 woorden over hoe een kietelervaring ontstaat. Gebruik minstens tien begrippen uit KSite en maak onderscheid tussen tast, voorspelling en reactie.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-extreme" data-challenge="quiz90"><div class="challenge-top"><span class="tag">Extreme</span><span class="tag">60 XP</span></div><span class="challenge-number">08</span><h3>90% zonder gokken</h3><p>Haal minimaal 90% op de quiz en lees na elke vraag de uitleg. Pas daarna mag je deze challenge afronden.</p><a class="card-link" href="quiz.html">Start quiz →</a><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-extreme" data-challenge="sourcecheck"><div class="challenge-top"><span class="tag">Extreme</span><span class="tag">65 XP</span></div><span class="challenge-number">09</span><h3>Claim-check</h3><p>Kies vijf veelgehoorde claims over kietelen en beschrijf welke informatie je nodig zou hebben om ze betrouwbaar te beoordelen.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                </div>
-            </section>
-
-            <section class="section container reveal">
-                <div class="section-heading"><div><span class="eyebrow">LEVEL 4 • MASTER</span><h2>Finale opdrachten</h2></div><p>Deze vragen combineren bijna alles uit KSite.</p></div>
-                <div class="challenge-grid">
-                    <article class="challenge-card difficulty-extreme" data-challenge="longform"><div class="challenge-top"><span class="tag">Master</span><span class="tag">70 XP</span></div><span class="challenge-number">10</span><h3>Mini-onderzoek</h3><p>Schrijf een mini-onderzoek met vraagstelling, hypothese, theoretische uitleg, beperkingen en conclusie over waarom gevoeligheid niet universeel te voorspellen is.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-extreme" data-challenge="teachback"><div class="challenge-top"><span class="tag">Master</span><span class="tag">75 XP</span></div><span class="challenge-number">11</span><h3>Teach-back</h3><p>Maak een complete les voor een beginner met vijf hoofdstukken, een begrippenlijst en vijf toetsvragen inclusief antwoorden.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                    <article class="challenge-card difficulty-extreme" data-challenge="master"><div class="challenge-top"><span class="tag">FINAL BOSS</span><span class="tag">100 XP</span></div><span class="challenge-number">12</span><h3>KSite Master</h3><p>Deze knop werkt pas nadat alle andere elf challenges voltooid zijn. Rond daarna de volledige Challenge-route af.</p><button class="btn primary small challenge-complete" type="button">Markeer voltooid</button></article>
-                </div>
-            </section>
-
-            <section class="section container reveal">
-                <div class="respect-banner">
-                    <div><span class="eyebrow">WAAROM GEEN 18+ MODUS?</span><h2>De moeilijkheid zit in kennis, niet in naaktheid of risicovol contact.</h2><p>KSite kan wel een zware Plus-laag hebben, maar geen systeem dat seksuele/naakte opdrachten ontgrendelt na een leeftijds- of lichaamscheck. Daarom zijn de hoogste tiers lange analyses, hoge quizdoelen en master-opdrachten.</p></div>
-                    <a class="btn secondary" href="kietelen.html">Terug naar theorie</a>
-                </div>
-            </section>
+          </article>
+          <article class="challenge-random-card">
+            <span class="eyebrow">RANDOMIZER</span>
+            <h3>Laat KSite kiezen</h3>
+            <div class="random-display" id="randomDisplay"><strong>Nog geen challenge gekozen</strong><p>Klik op Random Challenge.</p></div>
+            <div class="timer-panel hidden" id="timerPanel"><div><span class="eyebrow">LIVE TIMER</span><div class="timer-clock" id="timerClock">0s</div></div><button class="btn secondary small" id="stopTimerBtn" type="button">Stop timer</button></div>
+          </article>
         </div>
-    </main>
+      </section>
 
-    <footer class="site-footer">
-        <div class="container footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Plus</strong><small>Advanced Challenges</small></span></a><p>Zware educatieve opdrachten met XP en lokale voortgang.</p></div><div class="footer-column"><strong>Plus</strong><a href="plus-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="plus.html">Plus</a></div><div class="footer-column"><strong>Kennis</strong><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a></div><div class="footer-column"><strong>Opslag</strong><span>Lokale XP</span><span>Lokale voortgang</span><span>Geen tracking</span></div></div>
-        <div class="container footer-bottom"><span>© 2026 KSite</span><span>Plus demo • Educatieve challenges</span></div>
-    </footer>
+      <section class="section compact container reveal" id="regels">
+        <div class="challenge-rules">
+          <span class="eyebrow">VASTE REGELS</span>
+          <h3>Een challenge telt alleen als iedereen zich er goed bij voelt.</h3>
+          <div class="rules-list">
+            <div class="rule-row"><span class="rule-icon">✓</span><div><strong>Vraag vooraf toestemming.</strong><br>Iedere deelnemer kiest zelf welke plekken wel en niet oké zijn.</div></div>
+            <div class="rule-row"><span class="rule-icon">✓</span><div><strong>“Stop” betekent onmiddellijk stoppen.</strong><br>Niet nog een paar seconden doorgaan.</div></div>
+            <div class="rule-row"><span class="rule-icon">✓</span><div><strong>Normale kleding blijft aan.</strong><br>Geen naakte of seksuele varianten in KSite Challenges.</div></div>
+            <div class="rule-row"><span class="rule-icon">✓</span><div><strong>Niet vasthouden of blokkeren.</strong><br>Iedereen moet altijd makkelijk kunnen wegbewegen.</div></div>
+            <div class="rule-row"><span class="rule-icon">✓</span><div><strong>Een challenge mag altijd worden afgebroken.</strong><br>Stoppen betekent niet dat iemand heeft “verloren”.</div></div>
+          </div>
+        </div>
+      </section>
 
-    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
-    <script src="assets/js/app.js?v=3.1.0"></script>
-    <script src="assets/js/k3.js?v=3.1.0"></script>
+      <section class="section compact container reveal">
+        <div class="challenge-filterbar">
+          <div class="challenge-filter-group">
+            <button class="challenge-filter-btn active" data-filter="all" type="button">Alle 50</button>
+            <button class="challenge-filter-btn" data-filter="easy" type="button">Easy</button>
+            <button class="challenge-filter-btn" data-filter="medium" type="button">Medium</button>
+            <button class="challenge-filter-btn" data-filter="hard" type="button">Hard</button>
+            <button class="challenge-filter-btn" data-filter="extreme" type="button">Extreme</button>
+          </div>
+          <input class="challenge-search" id="challengeSearch" type="search" placeholder="Zoek challenge of plek...">
+        </div>
+      </section>
+
+      <section class="section compact container reveal">
+        <div class="safety-strip"><span class="rule-icon">!</span><div><strong>Challenge-generator = suggestie, geen opdracht.</strong><p>Als een gekozen challenge of plek niet goed voelt, sla je hem gewoon over en kies je een andere.</p></div></div>
+      </section>
+
+      <section class="section container reveal">
+        <div class="section-heading"><div><span class="eyebrow">50 CHALLENGES</span><h2>Easy tot Final Boss</h2></div><p>Filters en zoekfunctie werken direct zonder herladen.</p></div>
+        <div class="irl-grid" id="irlGrid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Plus</strong><small>IRL Challenges</small></span></a><p>50 vrijwillige, niet-seksuele IRL challenges met lokale progressie.</p></div><div class="footer-column"><strong>Plus</strong><a href="plus-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="ai-chat.html">AI Chat</a></div><div class="footer-column"><strong>Kennis</strong><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a></div><div class="footer-column"><strong>Veilig</strong><span>Vrijwillig</span><span>Direct stoppen</span><span>Geen vasthouden</span></div></div>
+    <div class="container footer-bottom"><span>© 2026 KSite</span><span>Plus demo • IRL Challenge Hub</span></div>
+  </footer>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+  <script src="assets/js/app.js?v=3.3"></script>
+  <script src="assets/js/challenges.js?v=3.3"></script>
 </body>
 </html>
