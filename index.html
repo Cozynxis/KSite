@@ -1,79 +1,336 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KSite is een interactieve educatieve website over kietelen, reflexen, zenuwen, lachen en grenzen." />
-  <title>KSite — Ontdek de wetenschap achter kietelen</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KSite is een uitgebreide educatieve website over tast, kietelen, zenuwen, reflexen en persoonlijke grenzen.">
+    <meta name="theme-color" content="#111827">
+    <title>KSite — Ontdek de wetenschap achter kietelen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-page="home">
-  <div class="noise"></div>
-  <header class="topbar">
-    <a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span><small>beta</small></a>
-    <nav class="desktop-nav">
-      <a class="active" href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a>
-    </nav>
-    <div class="nav-actions"><button class="icon-btn" id="themeBtn" aria-label="Wissel thema">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn">☰</button></div>
-  </header>
-  <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a><a href="profiel.html">Profiel</a></div>
+    <div class="page-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
 
-  <main>
-    <section class="hero wrap">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="live-dot"></span> Educatief • interactief • gratis</div>
-        <h1>Waarom zijn mensen<br><span>kietelig?</span></h1>
-        <p>KSite legt op een duidelijke en leuke manier uit wat er tijdens kietelen gebeurt in je huid, zenuwen en hersenen — inclusief reflexen, lachen, gewenning en persoonlijke grenzen.</p>
-        <div class="hero-actions"><a class="btn primary" href="ontdek.html">Start met ontdekken <span>→</span></a><a class="btn ghost" href="lessen.html">Bekijk de lessen</a></div>
-        <div class="hero-trust"><div><strong>12</strong><span>onderwerpen</span></div><div><strong>8</strong><span>lessen</span></div><div><strong>30+</strong><span>quizvragen</span></div></div>
-      </div>
-      <div class="hero-visual reveal delay-1">
-        <div class="orb orb-a"></div><div class="orb orb-b"></div>
-        <div class="science-card floating-card">
-          <div class="science-top"><span>LIVE UITLEG</span><span class="status">● actief</span></div>
-          <div class="brain-visual"><div class="brain-ring r1"></div><div class="brain-ring r2"></div><div class="brain-core">🧠</div></div>
-          <h3>Van aanraking naar reactie</h3><p>Receptoren in je huid sturen signalen via zenuwen naar je hersenen. Die bepalen razendsnel hoe je lichaam reageert.</p>
-          <div class="signal-row"><span>Huid</span><i>→</i><span>Zenuwen</span><i>→</i><span>Hersenen</span><i>→</i><span>Reactie</span></div>
+    <header class="topbar" id="topbar">
+        <a class="brand" href="index.html" aria-label="KSite home">
+            <span class="brand-mark">K</span>
+            <span class="brand-copy">
+                <strong>KSite</strong>
+                <small>Kennis • Tast • Reflexen</small>
+            </span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Hoofdnavigatie">
+            <a class="active" href="index.html">Home</a>
+            <a href="ontdek.html">Ontdek</a>
+            <a href="lessen.html">Lessen</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="plus.html">Plus</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeBtn" type="button" aria-label="Wissel thema">◐</button>
+            <a class="profile-pill" href="profiel.html">
+                <span class="avatar">K</span>
+                <span>Profiel</span>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
         </div>
-        <div class="mini-float float-one"><b>⚡</b><span><strong>Supersnel</strong><small>zenuwsignalen</small></span></div>
-        <div class="mini-float float-two"><b>✓</b><span><strong>Grenzen tellen</strong><small>altijd respecteren</small></span></div>
-      </div>
-    </section>
+    </header>
 
-    <section class="ticker"><div class="ticker-track"><span>ZENUWSTELSEL</span><i>✦</i><span>REFLEXEN</span><i>✦</i><span>HERSENEN</span><i>✦</i><span>GEVOEL</span><i>✦</i><span>LACHEN</span><i>✦</i><span>GRENZEN</span><i>✦</i><span>WETENSCHAP</span><i>✦</i><span>ZENUWSTELSEL</span><i>✦</i><span>REFLEXEN</span></div></section>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobiele navigatie">
+        <a class="active" href="index.html">Home</a>
+        <a href="ontdek.html">Ontdek</a>
+        <a href="lessen.html">Lessen</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="plus.html">Plus</a>
+        <a href="profiel.html">Profiel</a>
+    </nav>
 
-    <section class="wrap section-space">
-      <div class="section-head reveal"><div><span class="kicker">Kennisbank</span><h2>Leer hoe het werkt</h2></div><a href="ontdek.html" class="text-link">Alles bekijken →</a></div>
-      <div class="feature-grid">
-        <article class="topic-card reveal"><div class="topic-icon violet">⚡</div><span class="tag">Biologie</span><h3>De zenuwen achter gevoel</h3><p>Hoe receptoren prikkels registreren en hoe signalen door je zenuwstelsel reizen.</p><a href="ontdek.html#zenuwen">Ontdek onderwerp →</a></article>
-        <article class="topic-card reveal delay-1"><div class="topic-icon blue">🧠</div><span class="tag">Neurowetenschap</span><h3>Waarom kun je jezelf bijna niet kietelen?</h3><p>Je brein voorspelt zelfgemaakte bewegingen, waardoor de verrassing grotendeels verdwijnt.</p><a href="ontdek.html#hersenen">Lees de uitleg →</a></article>
-        <article class="topic-card reveal delay-2"><div class="topic-icon green">↯</div><span class="tag">Reacties</span><h3>Reflexen en lachen</h3><p>Waarom lachen niet altijd betekent dat iets grappig is, en waarom reflexen automatisch kunnen ontstaan.</p><a href="ontdek.html#reflexen">Meer informatie →</a></article>
-      </div>
-    </section>
+    <main>
+        <section class="hero container reveal">
+            <div class="hero-copy">
+                <span class="eyebrow">INTERACTIEF LEERPLATFORM</span>
+                <h1>Waarom reageert je lichaam op <span class="gradient-text">kietelen?</span></h1>
+                <p class="hero-lead">
+                    Ontdek hoe tastprikkels, huidreceptoren, zenuwen en hersenen samenwerken.
+                    KSite vertaalt wetenschap naar duidelijke uitleg, quizzen en interactieve lessen.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="ontdek.html">Start met ontdekken</a>
+                    <a class="btn secondary" href="lessen.html">Bekijk alle lessen</a>
+                </div>
+                <div class="hero-trust-row">
+                    <span>✓ Educatief</span>
+                    <span>✓ Gratis basis</span>
+                    <span>✓ Voortgang lokaal opgeslagen</span>
+                </div>
+            </div>
 
-    <section class="wide-band">
-      <div class="wrap split-feature">
-        <div class="reveal"><span class="kicker">Interactief</span><h2>Ontdek gevoeligheid zonder mythes.</h2><p>Mensen verschillen sterk. De interactieve ontdekpagina laat algemene huid- en zenuwconcepten zien zonder te doen alsof iedereen hetzelfde reageert.</p><ul class="check-list"><li>Algemene lichaamsgebieden</li><li>Uitleg over receptoren</li><li>Feit of fabel-kaarten</li><li>Veiligheid & toestemming</li></ul><a href="ontdek.html" class="btn primary">Open Ontdek</a></div>
-        <div class="meter-panel reveal delay-1"><div class="meter-title"><span>Voorbeeld: prikkelverwerking</span><b>informatief</b></div><div class="meter"><span style="--w:78%"></span></div><div class="meter-labels"><span>lage input</span><span>hoge input</span></div><div class="fact-box"><b>Goed om te weten</b><p>Hoe kietelig iemand is, is persoonlijk en kan per moment verschillen. Een kaart kan dat nooit exact voorspellen.</p></div></div>
-      </div>
-    </section>
+            <div class="hero-visual card glass">
+                <div class="visual-header">
+                    <span class="status-dot"></span>
+                    <span>Live kenniskaart</span>
+                </div>
+                <div class="signal-demo" aria-hidden="true">
+                    <div class="signal-node skin-node">Huid</div>
+                    <div class="signal-line"><span></span></div>
+                    <div class="signal-node nerve-node">Zenuw</div>
+                    <div class="signal-line"><span></span></div>
+                    <div class="signal-node brain-node">Hersenen</div>
+                </div>
+                <div class="visual-note">
+                    <strong>Prikkel → signaal → verwerking</strong>
+                    <p>Je hersenen combineren informatie uit meerdere zintuiglijke systemen om aanraking te interpreteren.</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="wrap section-space">
-      <div class="section-head reveal"><div><span class="kicker">KSite Academy</span><h2>Leren voelt als een game</h2><p>Voltooi lessen, verdien XP en test je kennis.</p></div></div>
-      <div class="academy-grid">
-        <div class="course-card reveal"><div class="course-num">01</div><div><span class="tag">5 min</span><h3>Wat is kietelen?</h3><p>De basis: prikkels, huidreceptoren en automatische reacties.</p><div class="course-progress"><span style="width:0%"></span></div></div><a href="lessen.html" class="round-arrow">→</a></div>
-        <div class="course-card reveal delay-1"><div class="course-num">02</div><div><span class="tag">8 min</span><h3>Je zenuwstelsel</h3><p>Van sensorische receptoren naar ruggenmerg en hersenen.</p><div class="course-progress"><span style="width:0%"></span></div></div><a href="lessen.html" class="round-arrow">→</a></div>
-        <div class="course-card reveal delay-2 locked-course"><div class="course-num">★</div><div><span class="tag plus-tag">PLUS</span><h3>Verdiepingsmodule</h3><p>Extra uitleg, uitgebreide kennischecks en statistieken.</p></div><a href="plus.html" class="round-arrow">↗</a></div>
-      </div>
-    </section>
+        <section class="stats-strip container reveal" aria-label="KSite statistieken">
+            <article class="stat-card">
+                <strong>8+</strong>
+                <span>educatieve modules</span>
+            </article>
+            <article class="stat-card">
+                <strong>40+</strong>
+                <span>kennisfeitjes</span>
+            </article>
+            <article class="stat-card">
+                <strong>100%</strong>
+                <span>browser-based</span>
+            </article>
+            <article class="stat-card">
+                <strong>XP</strong>
+                <span>met levels & badges</span>
+            </article>
+        </section>
 
-    <section class="wrap safety-banner reveal"><div class="safety-icon">♡</div><div><span class="kicker">Belangrijk</span><h2>Kietelen hoort vrijwillig te zijn.</h2><p>Lachen is geen automatische toestemming. Vraag of iets oké is, respecteer grenzen en stop meteen wanneer iemand dat aangeeft.</p></div><a href="ontdek.html#grenzen" class="btn light">Lees over grenzen</a></section>
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">BEGIN HIER</span>
+                    <h2>Vier routes door KSite</h2>
+                </div>
+                <p>Kies wat jij interessant vindt en bouw stap voor stap je kennis op.</p>
+            </div>
 
-    <section class="wrap plus-preview section-space reveal"><div class="plus-glow"></div><div class="plus-copy"><span class="plus-chip">KSite <b>PLUS</b></span><h2>Nog verder de diepte in.</h2><p>Ontgrendel een uitgebreid dashboard, verdiepende modules, extra quizzen, persoonlijke statistieken, favorieten en exclusieve thema’s.</p><div class="plus-bullets"><span>✓ Plus Dashboard</span><span>✓ Extra modules</span><span>✓ Statistieken</span><span>✓ Thema’s</span></div><a class="btn premium" href="plus.html">Ontdek KSite Plus →</a></div><div class="dashboard-mock"><div class="mock-side"><b>K</b><i></i><i></i><i></i><i></i></div><div class="mock-main"><small>PLUS DASHBOARD</small><h4>Welkom terug 👋</h4><div class="mock-stats"><span></span><span></span><span></span></div><div class="mock-chart"><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></section>
-  </main>
+            <div class="feature-grid four-columns">
+                <a class="feature-card" href="ontdek.html">
+                    <span class="feature-icon">⌁</span>
+                    <h3>Ontdek</h3>
+                    <p>Lees over huid, zenuwen, hersenen, reflexen, lachen en individuele verschillen.</p>
+                    <span class="card-link">Open kennisbank →</span>
+                </a>
+                <a class="feature-card" href="lessen.html">
+                    <span class="feature-icon">▦</span>
+                    <h3>Lessen</h3>
+                    <p>Volg overzichtelijke modules met leerdoelen, uitleg en korte kennistests.</p>
+                    <span class="card-link">Start een les →</span>
+                </a>
+                <a class="feature-card" href="quiz.html">
+                    <span class="feature-icon">?</span>
+                    <h3>Quiz</h3>
+                    <p>Test wat je weet en verdien XP door vragen over tast en het zenuwstelsel goed te beantwoorden.</p>
+                    <span class="card-link">Doe de quiz →</span>
+                </a>
+                <a class="feature-card plus-card" href="plus.html">
+                    <span class="feature-icon">✦</span>
+                    <h3>KSite Plus</h3>
+                    <p>Ontgrendel de uitgebreide demo-omgeving met extra modules, statistieken en dashboardfuncties.</p>
+                    <span class="card-link">Bekijk Plus →</span>
+                </a>
+            </div>
+        </section>
 
-  <footer><div class="wrap footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span></a><p>Educatie over gevoel, reflexen en het zenuwstelsel.</p></div><div><b>Ontdekken</b><a href="ontdek.html">Kennisbank</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a></div><div><b>KSite</b><a href="plus.html">Plus</a><a href="profiel.html">Profiel</a><a href="ontdek.html#grenzen">Veiligheid</a></div><div><b>Let op</b><p>KSite is educatief en vervangt geen medisch advies.</p></div></div><div class="wrap footer-bottom"><span>© 2026 KSite</span><span>Gemaakt voor leren & ontdekken</span></div></footer>
-  <div class="toast" id="toast"></div>
-  <script src="assets/js/app.js"></script>
+        <section class="section container reveal">
+            <div class="split-layout">
+                <article class="content-card large-card">
+                    <span class="eyebrow">DE BASIS</span>
+                    <h2>Wat is kietelen eigenlijk?</h2>
+                    <p>
+                        Kietelen is geen losstaand zintuig. Het is een ervaring die ontstaat wanneer je brein bepaalde
+                        lichte of onverwachte aanrakingen verwerkt. Daarbij spelen tastzenuwen, aandacht, verwachting,
+                        beweging en context allemaal een rol.
+                    </p>
+                    <p>
+                        Niet iedereen reageert hetzelfde. Sommige mensen zijn sterk gevoelig voor lichte aanraking,
+                        terwijl anderen nauwelijks reageren. Ook dezelfde persoon kan op verschillende momenten anders reageren.
+                    </p>
+                    <a class="text-link" href="ontdek.html">Lees de complete uitleg →</a>
+                </article>
+
+                <aside class="fact-stack">
+                    <article class="mini-card">
+                        <span class="mini-label">WIST JE DAT?</span>
+                        <h3>Voorspelbaarheid telt mee</h3>
+                        <p>Zelf veroorzaakte aanraking wordt door je hersenen vaak beter voorspeld en daardoor anders verwerkt.</p>
+                    </article>
+                    <article class="mini-card">
+                        <span class="mini-label">BELANGRIJK</span>
+                        <h3>Iedereen verschilt</h3>
+                        <p>Er bestaat geen universele kaart waarop voor iedereen exact dezelfde gevoeligheid geldt.</p>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">VAN PRIKKEL TOT ERVARING</span>
+                    <h2>Zo verwerkt je lichaam aanraking</h2>
+                </div>
+            </div>
+
+            <div class="timeline-grid">
+                <article class="timeline-step">
+                    <span class="step-number">01</span>
+                    <h3>Receptoren registreren</h3>
+                    <p>Gespecialiseerde zenuwuiteinden reageren op onder andere druk, beweging en trilling.</p>
+                </article>
+                <article class="timeline-step">
+                    <span class="step-number">02</span>
+                    <h3>Signalen reizen</h3>
+                    <p>Elektrische signalen worden via zenuwbanen richting ruggenmerg en hersenen gestuurd.</p>
+                </article>
+                <article class="timeline-step">
+                    <span class="step-number">03</span>
+                    <h3>Het brein combineert</h3>
+                    <p>Je hersenen verwerken locatie, sterkte, verwachting, aandacht en context samen.</p>
+                </article>
+                <article class="timeline-step">
+                    <span class="step-number">04</span>
+                    <h3>Je reageert</h3>
+                    <p>Dat kan een beweging, lachreactie, terugtrekreflex of helemaal geen opvallende reactie zijn.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FEIT OF FABEL</span>
+                    <h2>Veelgehoorde uitspraken</h2>
+                </div>
+            </div>
+
+            <div class="myth-grid">
+                <article class="myth-card">
+                    <span class="myth-badge fact">FEIT</span>
+                    <h3>Gevoeligheid kan veranderen</h3>
+                    <p>Aandacht, stemming, verwachting en gewenning kunnen invloed hebben op hoe sterk aanraking opvalt.</p>
+                </article>
+                <article class="myth-card">
+                    <span class="myth-badge myth">FABEL</span>
+                    <h3>Iedereen heeft dezelfde gevoelige plekken</h3>
+                    <p>Persoonlijke verschillen zijn groot. Een algemene gevoeligheidskaart kan nooit exact voorspellen wat iemand ervaart.</p>
+                </article>
+                <article class="myth-card">
+                    <span class="myth-badge fact">FEIT</span>
+                    <h3>Je brein voorspelt aanraking</h3>
+                    <p>Verwachting speelt een rol in de verwerking van zintuiglijke informatie.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="respect-banner">
+                <div>
+                    <span class="eyebrow">RESPECT & GRENZEN</span>
+                    <h2>Aanraking is altijd persoonlijk</h2>
+                    <p>
+                        Een educatieve site over tast hoort ook duidelijk te zijn over grenzen: lichamelijk contact moet vrijwillig zijn.
+                        Wanneer iemand niet wil worden aangeraakt of aangeeft dat het moet stoppen, dan stopt het direct.
+                    </p>
+                </div>
+                <a class="btn secondary" href="lessen.html#grenzen">Bekijk de les over grenzen</a>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="dashboard-preview glass">
+                <div class="preview-copy">
+                    <span class="eyebrow">JOUW VOORTGANG</span>
+                    <h2>Leer, verzamel XP en bouw je profiel uit</h2>
+                    <p>Je afgeronde lessen, XP, badges en quizresultaten worden lokaal in je browser opgeslagen.</p>
+                    <div class="hero-actions">
+                        <a class="btn primary" href="profiel.html">Open mijn profiel</a>
+                        <a class="btn ghost" href="quiz.html">Verdien XP</a>
+                    </div>
+                </div>
+                <div class="preview-panel">
+                    <div class="preview-level">
+                        <span>LEVEL</span>
+                        <strong id="homeLevel">1</strong>
+                    </div>
+                    <div class="progress-track">
+                        <span id="homeProgress" style="width: 20%"></span>
+                    </div>
+                    <div class="preview-meta">
+                        <span><strong id="homeXp">0</strong> XP</span>
+                        <span><strong id="homeLessons">0</strong> lessen voltooid</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="cta-panel">
+                <div>
+                    <span class="eyebrow">KLAAR OM TE BEGINNEN?</span>
+                    <h2>Duik de kennisbank in.</h2>
+                    <p>Start bij de basis of test direct hoeveel je al weet.</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn primary" href="ontdek.html">Ontdek KSite</a>
+                    <a class="btn secondary" href="quiz.html">Start quiz</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">K</span>
+                    <span class="brand-copy">
+                        <strong>KSite</strong>
+                        <small>Educatief platform</small>
+                    </span>
+                </a>
+                <p>Een interactieve website over tast, zenuwen, reflexen, hersenen en respectvolle grenzen.</p>
+            </div>
+            <div class="footer-column">
+                <strong>Ontdekken</strong>
+                <a href="ontdek.html">Kennisbank</a>
+                <a href="lessen.html">Lessen</a>
+                <a href="quiz.html">Quiz</a>
+            </div>
+            <div class="footer-column">
+                <strong>Account</strong>
+                <a href="profiel.html">Profiel</a>
+                <a href="plus.html">KSite Plus</a>
+                <a href="plus-dashboard.html">Plus Dashboard</a>
+            </div>
+            <div class="footer-column">
+                <strong>KSite</strong>
+                <span>Versie 2.0</span>
+                <span>GitHub Pages-ready</span>
+                <span>Geen externe tracking</span>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© 2026 KSite</span>
+            <span>Educatieve demo • Geen medisch advies</span>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
