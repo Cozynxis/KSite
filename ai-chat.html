@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KSite Assist: lokale Plus-chat over kietelen, zenuwen, gevoelige plekken, reacties, challenges en toestemming.">
+  <title>KSite Assist — AI Chat</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=3.3">
+  <link rel="stylesheet" href="assets/css/chat.css?v=3.3">
+</head>
+<body data-page="ai-chat">
+  <div class="page-background" aria-hidden="true"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span></div>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Assist</strong><small>Plus Knowledge Chat</small></span></a>
+    <nav class="desktop-nav"><a href="index.html">Home</a><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="challenges.html">Challenges</a><a class="active" href="ai-chat.html">AI Chat</a><a href="plus-dashboard.html">Dashboard</a></nav>
+    <div class="nav-actions"><button class="icon-btn" id="themeBtn" type="button">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn" type="button">☰</button></div>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="challenges.html">Challenges</a><a class="active" href="ai-chat.html">AI Chat</a><a href="plus-dashboard.html">Dashboard</a></nav>
+
+  <main>
+    <section class="page-hero container reveal">
+      <div class="breadcrumbs"><a href="plus-dashboard.html">Plus Dashboard</a><span>/</span><span>KSite Assist</span></div>
+      <span class="eyebrow">PLUS ONLY • LOCAL KNOWLEDGE CHAT</span>
+      <h1>Vraag het aan <span class="gradient-text">KSite Assist.</span></h1>
+      <p class="page-lead">Een slimme lokale chat over kietelen, zenuwen, gevoelige plekken, reacties, challenges, gewenning en toestemming. Alles draait direct in je browser.</p>
+    </section>
+
+    <section class="section compact container reveal" id="chatGate">
+      <div class="challenge-control-card">
+        <span class="eyebrow">PLUS VEREIST</span>
+        <h2>KSite Assist hoort bij Plus.</h2>
+        <p class="page-lead">Activeer Plus om de chat te openen.</p>
+        <a class="btn primary" href="plus.html">Open KSite Plus</a>
+      </div>
+    </section>
+
+    <section class="section compact container reveal hidden" id="chatContent">
+      <div class="chat-shell">
+        <aside class="chat-sidebar">
+          <div class="chat-brandbox"><strong>✦ KSite Assist</strong><p>Lokale kennisassistent zonder externe API of tracking.</p></div>
+          <div>
+            <div class="chat-side-title">Voorbeeldvragen</div>
+            <div class="chat-prompt-list" style="margin-top:10px">
+              <button class="chat-prompt" data-chat-prompt="Wat is kietelen precies?" type="button">Wat is kietelen?</button>
+              <button class="chat-prompt" data-chat-prompt="Welke plekken worden vaak gevoelig gevonden?" type="button">Welke plekken?</button>
+              <button class="chat-prompt" data-chat-prompt="Waarom kun je jezelf minder goed kietelen?" type="button">Waarom zelf minder?</button>
+              <button class="chat-prompt" data-chat-prompt="Wat is knismesis?" type="button">Wat is knismesis?</button>
+              <button class="chat-prompt" data-chat-prompt="Wat is gargalesis?" type="button">Wat is gargalesis?</button>
+              <button class="chat-prompt" data-chat-prompt="Waarom lachen mensen bij kietelen?" type="button">Waarom lachen?</button>
+              <button class="chat-prompt" data-chat-prompt="Hoe werken de IRL challenges?" type="button">IRL challenges</button>
+              <button class="chat-prompt" data-chat-prompt="Wat zijn goede regels voor toestemming?" type="button">Toestemming</button>
+            </div>
+          </div>
+          <div class="chat-safety"><strong>Grenzen</strong><br>KSite Assist beantwoordt geen seksuele of naakte verzoeken. Hij kan wel uitgebreid helpen met niet-seksuele kennis en veilige challenges.</div>
+        </aside>
+
+        <div class="chat-main">
+          <div class="chat-header">
+            <div class="chat-agent"><div class="chat-avatar">AI</div><div><strong>KSite Assist</strong><small><span class="online-dot"></span>Lokale kennisbank actief</small></div></div>
+            <button class="btn secondary small" id="clearChat" type="button">Nieuwe chat</button>
+          </div>
+          <div class="chat-log" id="chatLog" aria-live="polite"></div>
+          <div class="chat-input-area">
+            <div class="chat-input-wrap"><textarea class="chat-input" id="chatInput" rows="1" placeholder="Vraag iets over kietelen..."></textarea><button class="chat-send" id="chatSend" type="button" aria-label="Verstuur">➜</button></div>
+            <div class="chat-footer-note">KSite Assist is een lokale kennisdemo en kan fouten maken. Geen medisch advies.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Assist</strong><small>Knowledge Chat</small></span></a><p>Lokale chat voor vragen over KSite-onderwerpen.</p></div><div class="footer-column"><strong>Plus</strong><a href="plus-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="ai-chat.html">AI Chat</a></div><div class="footer-column"><strong>Kennis</strong><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a></div><div class="footer-column"><strong>Techniek</strong><span>Geen API-key</span><span>Geen externe AI</span><span>Geen tracking</span></div></div>
+    <div class="container footer-bottom"><span>© 2026 KSite</span><span>Plus demo • KSite Assist</span></div>
+  </footer>
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+  <script src="assets/js/app.js?v=3.3"></script>
+  <script src="assets/js/chat.js?v=3.3"></script>
+</body>
+</html>
