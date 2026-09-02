@@ -1,1 +1,303 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KSite Plus</title><link rel="stylesheet" href="assets/css/style.css"></head><body data-page="plus"><div class="noise"></div><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span><small>PLUS</small></a><nav class="desktop-nav"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a class="active" href="plus.html">Plus</a></nav><div class="nav-actions"><button class="icon-btn" id="themeBtn">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a><a href="profiel.html">Profiel</a></div><main><section class="plus-hero wrap reveal"><span class="plus-chip">KSite <b>PLUS</b></span><h1>Meer leren. Meer inzicht.</h1><p style="max-width:680px;margin:auto;color:var(--muted)">Plus is in deze GitHub Pages-versie een demo-abonnement. Je ontgrendelt extra educatieve modules, statistieken en een aparte dashboardomgeving.</p><div class="price-card"><span class="kicker">Demo plan</span><div class="price">€2,99 <small>/ maand</small></div><p style="color:#aaa4b7">Geen echte betaling in deze demo. De knop hieronder activeert Plus alleen lokaal in je browser.</p><button class="btn premium" id="activatePlus" style="width:100%;margin-top:12px">Activeer Plus demo →</button></div></section><section class="wrap section-space" style="padding-top:20px"><div class="section-head"><div><span class="kicker">Alles inbegrepen</span><h2>Wat krijg je met Plus?</h2></div></div><div class="plus-feature-grid"><article class="plus-feature reveal"><span>▦</span><b>Plus Dashboard</b><p>Een aparte omgeving met voortgang, niveau, XP, statistieken en snelle toegang tot premium modules.</p></article><article class="plus-feature reveal delay-1"><span>★</span><b>Verdiepende lessen</b><p>Extra modules over toestemming, sensorische verwerking en hoe voorspelling in de hersenen werkt.</p></article><article class="plus-feature reveal delay-2"><span>◫</span><b>Persoonlijke statistieken</b><p>Bekijk je lokale leerprogressie en hoeveel modules je al hebt afgerond.</p></article><article class="plus-feature reveal"><span>✓</span><b>Extra kennischecks</b><p>Meer oefenmomenten en uitleg om begrippen beter te onthouden.</p></article><article class="plus-feature reveal delay-1"><span>◐</span><b>Extra thema’s</b><p>Een uitgebreidere premium ervaring met een rustige, gefocuste dashboardstijl.</p></article><article class="plus-feature reveal delay-2"><span>♡</span><b>Veilig leren</b><p>Alle content blijft educatief en benadrukt respect, vrijwilligheid en persoonlijke grenzen.</p></article></div></section></main><footer><div class="wrap footer-bottom"><span>© 2026 KSite Plus</span><span>Demo-abonnement — geen echte betaling</span></div></footer><div class="toast" id="toast"></div><script src="assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ontdek KSite Plus: extra educatieve modules, uitgebreide statistieken en een speciaal dashboard.">
+    <title>KSite — Plus</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="plus">
+    <div class="page-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span class="brand-copy">
+                <strong>KSite</strong>
+                <small>Kennis • Tast • Reflexen</small>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="ontdek.html">Ontdek</a>
+            <a href="lessen.html">Lessen</a>
+            <a href="quiz.html">Quiz</a>
+            <a class="active" href="plus.html">Plus</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeBtn" type="button">◐</button>
+            <a class="profile-pill" href="profiel.html">
+                <span class="avatar">K</span>
+                <span>Profiel</span>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button">☰</button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="ontdek.html">Ontdek</a>
+        <a href="lessen.html">Lessen</a>
+        <a href="quiz.html">Quiz</a>
+        <a class="active" href="plus.html">Plus</a>
+        <a href="profiel.html">Profiel</a>
+    </nav>
+
+    <main>
+        <section class="page-hero center container reveal">
+            <span class="eyebrow">KSITE PLUS</span>
+            <h1>Meer verdieping. Meer functies. <span class="gradient-text">Eén dashboard.</span></h1>
+            <p class="page-lead">
+                KSite Plus is in deze GitHub Pages-versie een volledig lokale demo. Activeer hem zonder betaling
+                en ontdek extra modules, dashboards, statistieken en leerfuncties.
+            </p>
+            <div class="hero-actions" style="justify-content:center">
+                <button class="btn primary" data-plus-activate type="button">Activeer demo Plus</button>
+                <a class="btn secondary" href="#functies">Bekijk functies</a>
+            </div>
+            <div class="hero-trust-row" style="justify-content:center">
+                <span>✓ Geen betaling</span>
+                <span>✓ Geen account nodig</span>
+                <span>✓ Lokaal te testen</span>
+            </div>
+        </section>
+
+        <section class="section compact container reveal">
+            <div class="respect-banner">
+                <div>
+                    <span class="eyebrow">STATUS</span>
+                    <h2>Jouw Plus-status: <span data-plus-status>Niet actief</span></h2>
+                    <p>De huidige demo bewaart deze status alleen in localStorage op dit apparaat en in deze browser.</p>
+                </div>
+                <a class="btn secondary" href="plus-dashboard.html">Open Dashboard</a>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="functies">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">PLUS FUNCTIES</span>
+                    <h2>Wat wordt er extra ontgrendeld?</h2>
+                </div>
+                <p>Plus bouwt bovenop de gratis KSite-basis zonder de gewone lessen weg te halen.</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card plus-card">
+                    <span class="feature-icon">▦</span>
+                    <h3>Extra modules</h3>
+                    <p>Ontgrendel verdiepende lessen over persoonlijke verschillen en voorspelling in het brein.</p>
+                    <span class="card-link">2 extra modules</span>
+                </article>
+                <article class="feature-card plus-card">
+                    <span class="feature-icon">↗</span>
+                    <h3>Plus Dashboard</h3>
+                    <p>Bekijk leerstatistieken, voortgang, activiteit en aanbevelingen in een aparte premium omgeving.</p>
+                    <span class="card-link">Dashboard layout</span>
+                </article>
+                <article class="feature-card plus-card">
+                    <span class="feature-icon">★</span>
+                    <h3>Extra badges</h3>
+                    <p>Je profiel kan een Plus-badge activeren zodra de lokale demo-status actief is.</p>
+                    <span class="card-link">Profiel-uitbreiding</span>
+                </article>
+                <article class="feature-card plus-card">
+                    <span class="feature-icon">◎</span>
+                    <h3>Verdiepende inzichten</h3>
+                    <p>Gebruik het dashboard om belangrijke thema's sneller terug te vinden en je leerpad te plannen.</p>
+                    <span class="card-link">Slimmere navigatie</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">VERGELIJKING</span>
+                    <h2>Gratis tegenover Plus</h2>
+                </div>
+            </div>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Functie</th>
+                        <th>Gratis</th>
+                        <th>Plus Demo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kennisbank</td>
+                        <td>Volledig beschikbaar</td>
+                        <td>Volledig beschikbaar</td>
+                    </tr>
+                    <tr>
+                        <td>Basislessen</td>
+                        <td>6 modules</td>
+                        <td>6 modules</td>
+                    </tr>
+                    <tr>
+                        <td>Verdiepende lessen</td>
+                        <td>Beperkt</td>
+                        <td>2 extra modules</td>
+                    </tr>
+                    <tr>
+                        <td>Quiz</td>
+                        <td>Beschikbaar</td>
+                        <td>Beschikbaar</td>
+                    </tr>
+                    <tr>
+                        <td>XP & levels</td>
+                        <td>Beschikbaar</td>
+                        <td>Beschikbaar</td>
+                    </tr>
+                    <tr>
+                        <td>Plus Dashboard</td>
+                        <td>Niet beschikbaar</td>
+                        <td>Beschikbaar</td>
+                    </tr>
+                    <tr>
+                        <td>Plus badge</td>
+                        <td>Vergrendeld</td>
+                        <td>Ontgrendeld</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">PRIJZENDEMO</span>
+                    <h2>Zo zou een abonnement eruit kunnen zien</h2>
+                </div>
+                <p>Dit is alleen een visueel ontwerp. Er wordt nergens geld afgeschreven.</p>
+            </div>
+            <div class="price-grid">
+                <article class="price-card">
+                    <span class="eyebrow">BASIS</span>
+                    <h3 class="mt-8">KSite Free</h3>
+                    <div class="price">€0 <small>/ altijd</small></div>
+                    <ul class="check-list">
+                        <li>Kennisbank</li>
+                        <li>Basislessen</li>
+                        <li>Quiz & XP</li>
+                        <li>Profiel</li>
+                    </ul>
+                    <a class="btn secondary" href="lessen.html">Gebruik gratis</a>
+                </article>
+                <article class="price-card featured">
+                    <span class="eyebrow">POPULAIR</span>
+                    <h3 class="mt-8">KSite Plus</h3>
+                    <div class="price">Demo <small>/ lokaal</small></div>
+                    <ul class="check-list">
+                        <li>Alles van Free</li>
+                        <li>Extra modules</li>
+                        <li>Plus Dashboard</li>
+                        <li>Plus badge</li>
+                        <li>Verdiepende inzichten</li>
+                    </ul>
+                    <button class="btn primary" data-plus-activate type="button">Activeer demo Plus</button>
+                </article>
+                <article class="price-card">
+                    <span class="eyebrow">LATER</span>
+                    <h3 class="mt-8">Echte accounts</h3>
+                    <div class="price">— <small>/ toekomst</small></div>
+                    <ul class="check-list">
+                        <li>Beveiligde backend nodig</li>
+                        <li>Login-systeem nodig</li>
+                        <li>Betaalprovider nodig</li>
+                        <li>Server-side validatie nodig</li>
+                    </ul>
+                    <span class="btn secondary">Nog niet actief</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="split-layout">
+                <article class="content-card large-card">
+                    <span class="eyebrow">HOE DE DEMO WERKT</span>
+                    <h2>Plus zonder backend testen</h2>
+                    <p>Wanneer je de demo activeert, schrijft KSite simpelweg een lokale waarde naar je browseropslag.</p>
+                    <p>De lessenpagina leest die waarde uit en ontgrendelt vervolgens de Plus-modules. Het dashboard doet dezelfde controle voordat de inhoud zichtbaar wordt.</p>
+                    <p>Dit is handig om de interface te testen op GitHub Pages, maar het is geen veilig betalingssysteem voor een echte commerciële website.</p>
+                </article>
+                <aside class="fact-stack">
+                    <article class="mini-card">
+                        <span class="mini-label">TECHNIEK</span>
+                        <h3>localStorage</h3>
+                        <p>De Plus-status blijft bewaard totdat lokale browserdata wordt verwijderd of de demo wordt uitgeschakeld.</p>
+                    </article>
+                    <article class="mini-card">
+                        <span class="mini-label">VEILIGHEID</span>
+                        <h3>Geen geheime keys</h3>
+                        <p>Een statische GitHub Pages-site mag nooit geheime betaal- of databasekeys in JavaScript bevatten.</p>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FAQ</span>
+                    <h2>Veelgestelde vragen</h2>
+                </div>
+            </div>
+            <div class="faq-grid">
+                <details class="faq-card">
+                    <summary>Kost deze Plus-demo geld?</summary>
+                    <p>Nee. Deze versie bevat geen echte betaling en activeert alleen een lokale demo-status.</p>
+                </details>
+                <details class="faq-card">
+                    <summary>Blijft Plus actief?</summary>
+                    <p>Ja, binnen dezelfde browser zolang de localStorage-data blijft bestaan.</p>
+                </details>
+                <details class="faq-card">
+                    <summary>Werkt dit op GitHub Pages?</summary>
+                    <p>Ja. De volledige demo gebruikt alleen HTML, CSS en JavaScript.</p>
+                </details>
+                <details class="faq-card">
+                    <summary>Kan er later echte betaling komen?</summary>
+                    <p>Ja, maar dan is een beveiligde backend en een betaalprovider nodig.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="cta-panel">
+                <div>
+                    <span class="eyebrow">PROBEER HET</span>
+                    <h2>Open de volledige Plus-omgeving.</h2>
+                    <p>Activeer de demo en ga daarna direct naar het speciale dashboard.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn primary" data-plus-activate type="button">Activeer Plus</button>
+                    <button class="btn ghost hidden" id="disablePlusBtn" type="button">Schakel Plus uit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite</strong><small>Educatief platform</small></span></a>
+                <p>KSite Plus voegt extra leerfuncties toe aan de gratis basis.</p>
+            </div>
+            <div class="footer-column"><strong>Leren</strong><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a></div>
+            <div class="footer-column"><strong>Plus</strong><a href="plus.html">Over Plus</a><a href="plus-dashboard.html">Dashboard</a><a href="profiel.html">Profiel</a></div>
+            <div class="footer-column"><strong>Demo</strong><span>Geen betaling</span><span>LocalStorage</span><span>GitHub Pages-ready</span></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 KSite</span><span>Educatieve demo • Geen medisch advies</span></div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
