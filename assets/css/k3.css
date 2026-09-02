@@ -1,0 +1,225 @@
+/* KSite 3.0 extension — loaded only by the new knowledge/challenge pages */
+
+.zone-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.zone-card,
+.challenge-card,
+.plus-gate-card,
+.intensity-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--panel);
+    box-shadow: var(--shadow-small);
+}
+
+.zone-card {
+    position: relative;
+    min-height: 280px;
+    padding: 26px;
+    overflow: hidden;
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.zone-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-strong);
+}
+
+.zone-card::after {
+    content: "";
+    position: absolute;
+    width: 145px;
+    height: 145px;
+    right: -75px;
+    bottom: -75px;
+    border-radius: 50%;
+    background: var(--cyan-soft);
+}
+
+.zone-index {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: .74rem;
+    font-weight: 900;
+    letter-spacing: .16em;
+}
+
+.zone-card h3 {
+    margin-bottom: 9px;
+    font-size: 1.2rem;
+}
+
+.zone-card p {
+    color: var(--text-soft);
+}
+
+.zone-card .tag {
+    display: inline-flex;
+    margin-top: 14px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--primary-soft);
+    color: var(--cyan);
+    font-size: .72rem;
+    font-weight: 800;
+}
+
+.zone-callout {
+    margin-top: 26px;
+    padding: 22px;
+    border: 1px solid rgba(56,216,255,.2);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--cyan-soft), var(--primary-soft));
+}
+
+.zone-callout strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.challenge-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 365px;
+    padding: 26px;
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-strong);
+}
+
+.challenge-card.completed {
+    border-color: rgba(72,221,167,.45);
+    background: linear-gradient(180deg, var(--green-soft), var(--panel));
+}
+
+.challenge-card .challenge-complete {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.challenge-card.completed .challenge-complete {
+    color: var(--green);
+    border-color: rgba(72,221,167,.3);
+    background: var(--green-soft);
+}
+
+.challenge-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.challenge-number {
+    display: block;
+    margin: 28px 0 8px;
+    color: var(--muted);
+    font-size: .74rem;
+    font-weight: 900;
+    letter-spacing: .16em;
+}
+
+.challenge-card p {
+    margin-bottom: 18px;
+    color: var(--text-soft);
+}
+
+.challenge-card .tag {
+    display: inline-flex;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--primary-soft);
+    color: var(--cyan);
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+.difficulty-hard {
+    border-color: rgba(255,178,92,.3);
+}
+
+.difficulty-extreme {
+    border-color: rgba(255,111,145,.35);
+    background: linear-gradient(180deg, var(--red-soft), var(--panel));
+}
+
+.intensity-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.intensity-card {
+    padding: 22px;
+}
+
+.intensity-card strong {
+    display: block;
+    margin: 9px 0 4px;
+    font-size: 1.35rem;
+}
+
+.intensity-card p {
+    color: var(--text-soft);
+    font-size: .88rem;
+}
+
+.plus-gate-card {
+    max-width: 760px;
+    margin-inline: auto;
+    padding: 45px;
+    text-align: center;
+}
+
+.plus-gate-card .feature-icon {
+    margin-inline: auto;
+}
+
+.challenge-note {
+    padding: 20px 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: var(--panel);
+    color: var(--text-soft);
+}
+
+.challenge-note strong {
+    color: var(--text);
+}
+
+@media (max-width: 1050px) {
+    .zone-grid,
+    .intensity-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .challenge-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .zone-grid,
+    .challenge-grid,
+    .intensity-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .plus-gate-card {
+        padding: 27px;
+    }
+}
