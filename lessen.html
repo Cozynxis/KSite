@@ -1,1 +1,305 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lessen — KSite</title><link rel="stylesheet" href="assets/css/style.css"></head><body data-page="lessons"><div class="noise"></div><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span><small>beta</small></a><nav class="desktop-nav"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a class="active" href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a></nav><div class="nav-actions"><button class="icon-btn" id="themeBtn">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a><a href="profiel.html">Profiel</a></div><main><section class="page-hero wrap reveal"><span class="kicker">KSite Academy</span><h1>Leer stap voor stap.</h1><p>Voltooi modules, verzamel XP en bouw kennis op over tast, zenuwen, hersenen, reflexen en grenzen.</p></section><section class="wrap section-space" style="padding-top:10px"><div class="section-head"><div><span class="kicker">8 modules</span><h2>Jouw leerpad</h2></div><a href="profiel.html" class="text-link">Bekijk voortgang →</a></div><div class="lesson-grid" id="lessonGrid"></div></section><section class="wrap safety-banner reveal"><div class="safety-icon">✓</div><div><span class="kicker">Leertip</span><h2>Doe daarna de kennisquiz.</h2><p>De vragen sluiten aan op de gratis modules en helpen je zien welke onderwerpen je al goed begrijpt.</p></div><a href="quiz.html" class="btn light">Start quiz</a></section></main><div id="lessonModal" style="display:none;position:fixed;inset:0;background:rgba(5,5,10,.82);z-index:150;place-items:center;padding:20px" onclick="if(event.target===this)closeLesson()"><div class="info-card" style="max-width:650px;width:100%;box-shadow:var(--shadow)"><button onclick="closeLesson()" class="icon-btn" style="float:right">×</button><div id="lessonContent"></div></div></div><footer><div class="wrap footer-bottom"><span>© 2026 KSite Academy</span><span>Je voortgang wordt lokaal op dit apparaat bewaard</span></div></footer><div class="toast" id="toast"></div><script src="assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Volg uitgebreide KSite lessen over tast, zenuwen, hersenen, reflexen en grenzen.">
+    <title>KSite — Lessen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="lessons">
+    <div class="page-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span class="brand-copy">
+                <strong>KSite</strong>
+                <small>Kennis • Tast • Reflexen</small>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="ontdek.html">Ontdek</a>
+            <a class="active" href="lessen.html">Lessen</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="plus.html">Plus</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeBtn" type="button">◐</button>
+            <a class="profile-pill" href="profiel.html">
+                <span class="avatar">K</span>
+                <span>Profiel</span>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button">☰</button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="ontdek.html">Ontdek</a>
+        <a class="active" href="lessen.html">Lessen</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="plus.html">Plus</a>
+        <a href="profiel.html">Profiel</a>
+    </nav>
+
+    <main>
+        <section class="page-hero container reveal">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Lessen</span>
+            </div>
+            <span class="eyebrow">KSITE ACADEMY</span>
+            <h1>Leer stap voor stap hoe <span class="gradient-text">tast</span> werkt.</h1>
+            <p class="page-lead">
+                Acht modules nemen je mee van huidreceptoren en zenuwen tot hersenverwerking,
+                reflexen, persoonlijke verschillen en respect voor grenzen.
+            </p>
+            <div class="hero-actions">
+                <a class="btn primary" href="#alle-lessen">Bekijk modules</a>
+                <a class="btn secondary" href="quiz.html">Test je kennis</a>
+            </div>
+        </section>
+
+        <section class="section compact container reveal">
+            <div class="stats-strip">
+                <article class="stat-card">
+                    <strong>8</strong>
+                    <span>modules</span>
+                </article>
+                <article class="stat-card">
+                    <strong>60+</strong>
+                    <span>minuten uitleg</span>
+                </article>
+                <article class="stat-card">
+                    <strong>435</strong>
+                    <span>XP te verdienen</span>
+                </article>
+                <article class="stat-card">
+                    <strong>2</strong>
+                    <span>Plus-modules</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">LEERPAD</span>
+                    <h2>Van basis naar verdieping</h2>
+                </div>
+                <p>De modules zijn zo opgebouwd dat nieuwe onderwerpen voortbouwen op wat je eerder hebt geleerd.</p>
+            </div>
+
+            <div class="timeline-grid">
+                <article class="timeline-step">
+                    <span class="step-number">FASE 01</span>
+                    <h3>Waarnemen</h3>
+                    <p>Begin bij huid, receptoren en het registreren van mechanische prikkels.</p>
+                </article>
+                <article class="timeline-step">
+                    <span class="step-number">FASE 02</span>
+                    <h3>Doorgeven</h3>
+                    <p>Leer hoe zenuwsignalen van de periferie richting centrale verwerking reizen.</p>
+                </article>
+                <article class="timeline-step">
+                    <span class="step-number">FASE 03</span>
+                    <h3>Interpreteren</h3>
+                    <p>Ontdek hoe je brein informatie combineert met verwachting, aandacht en context.</p>
+                </article>
+                <article class="timeline-step">
+                    <span class="step-number">FASE 04</span>
+                    <h3>Toepassen</h3>
+                    <p>Gebruik je kennis om reacties, verschillen en respectvolle grenzen beter te begrijpen.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="alle-lessen">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">ALLE MODULES</span>
+                    <h2>Kies je volgende les</h2>
+                </div>
+                <p>Zoek op onderwerp of filter op categorie. Je voortgang wordt lokaal opgeslagen.</p>
+            </div>
+
+            <div class="search-panel">
+                <input
+                    class="search-input"
+                    id="lessonSearch"
+                    type="search"
+                    placeholder="Zoek bijvoorbeeld zenuwen, hersenen of grenzen…"
+                    aria-label="Zoek lessen"
+                >
+                <a class="btn secondary" href="profiel.html">Mijn voortgang</a>
+            </div>
+
+            <div class="filter-row" aria-label="Lesfilters">
+                <button class="filter-chip active" data-filter="all" type="button">Alles</button>
+                <button class="filter-chip" data-filter="basis" type="button">Basis</button>
+                <button class="filter-chip" data-filter="zenuwstelsel" type="button">Zenuwstelsel</button>
+                <button class="filter-chip" data-filter="hersenen" type="button">Hersenen</button>
+                <button class="filter-chip" data-filter="reacties" type="button">Reacties</button>
+                <button class="filter-chip" data-filter="respect" type="button">Respect</button>
+            </div>
+
+            <div class="lesson-grid mt-32" id="lessonGrid">
+                <article class="lesson-card">
+                    <span class="lesson-number">MODULE 01</span>
+                    <h3>De basis van tast</h3>
+                    <p>Leer hoe receptoren aanraking, druk en beweging registreren.</p>
+                </article>
+                <article class="lesson-card">
+                    <span class="lesson-number">MODULE 02</span>
+                    <h3>Zenuwen en signalen</h3>
+                    <p>Volg de route van huid naar centrale verwerking.</p>
+                </article>
+                <article class="lesson-card">
+                    <span class="lesson-number">MODULE 03</span>
+                    <h3>Hoe je brein aanraking verwerkt</h3>
+                    <p>Ontdek hoe aandacht en context je waarneming beïnvloeden.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="split-layout">
+                <article class="content-card large-card">
+                    <span class="eyebrow">ZO WERKT XP</span>
+                    <h2>Bouw je KSite-profiel uit</h2>
+                    <p>
+                        Elke module levert XP op wanneer je hem voor het eerst afrondt.
+                        Met iedere 250 XP stijgt je level. Je kunt daarnaast badges ontgrendelen
+                        door meerdere lessen te voltooien, quizzen te spelen of een leerstreak op te bouwen.
+                    </p>
+                    <p>
+                        Alles wordt lokaal in je browser bewaard. KSite verstuurt voor deze demo geen
+                        persoonlijke voortgang naar een externe server.
+                    </p>
+                    <a class="text-link" href="profiel.html">Bekijk je profiel →</a>
+                </article>
+                <aside class="fact-stack">
+                    <article class="mini-card">
+                        <span class="mini-label">LEVELS</span>
+                        <h3>250 XP per level</h3>
+                        <p>Je level groeit automatisch mee met je totale hoeveelheid XP.</p>
+                    </article>
+                    <article class="mini-card">
+                        <span class="mini-label">BADGES</span>
+                        <h3>Meerdere doelen</h3>
+                        <p>Verdien badges door lessen, quizzen, streaks en Plus-functies te gebruiken.</p>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section container reveal" id="grenzen">
+            <div class="respect-banner">
+                <div>
+                    <span class="eyebrow">MODULE 08 • RESPECT</span>
+                    <h2>Een reactie is geen toestemming</h2>
+                    <p>
+                        Lachen, bewegen of schrikken kan automatisch zijn. Dat zegt op zichzelf niets over toestemming.
+                        Bij lichamelijk contact zijn duidelijke grenzen belangrijk: een nee- of stopsignaal betekent stoppen.
+                    </p>
+                </div>
+                <button class="btn secondary complete-lesson" data-lesson-id="grenzen" type="button" onclick="window.KSite?.completeLesson('grenzen')">
+                    Markeer les voltooid
+                </button>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">STUDIEHULP</span>
+                    <h2>Zo haal je meer uit de lessen</h2>
+                </div>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-icon">1</span>
+                    <h3>Begin bij de basis</h3>
+                    <p>De eerste drie modules leggen termen uit die later opnieuw terugkomen.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">2</span>
+                    <h3>Test jezelf</h3>
+                    <p>Doe na een paar lessen de quiz om te ontdekken welke onderwerpen nog aandacht nodig hebben.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">3</span>
+                    <h3>Bekijk je voortgang</h3>
+                    <p>Gebruik je profiel om XP, levels, badges en afgeronde modules te volgen.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">4</span>
+                    <h3>Herhaal moeilijke stof</h3>
+                    <p>Terugkijken is normaal. Juist herhaling helpt begrippen beter te onthouden.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="cta-panel">
+                <div>
+                    <span class="eyebrow">VOLGENDE STAP</span>
+                    <h2>Klaar voor een kennistest?</h2>
+                    <p>De quiz bevat vragen uit meerdere modules en geeft na elk antwoord extra uitleg.</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn primary" href="quiz.html">Start de quiz</a>
+                    <a class="btn secondary" href="ontdek.html">Naar kennisbank</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">K</span>
+                    <span class="brand-copy">
+                        <strong>KSite</strong>
+                        <small>Educatief platform</small>
+                    </span>
+                </a>
+                <p>Leer over tast, zenuwen, hersenen, reacties en persoonlijke grenzen.</p>
+            </div>
+            <div class="footer-column">
+                <strong>Leren</strong>
+                <a href="ontdek.html">Ontdek</a>
+                <a href="lessen.html">Lessen</a>
+                <a href="quiz.html">Quiz</a>
+            </div>
+            <div class="footer-column">
+                <strong>Profiel</strong>
+                <a href="profiel.html">Voortgang</a>
+                <a href="plus.html">KSite Plus</a>
+                <a href="plus-dashboard.html">Dashboard</a>
+            </div>
+            <div class="footer-column">
+                <strong>Versie</strong>
+                <span>KSite 2.0</span>
+                <span>GitHub Pages</span>
+                <span>Lokale opslag</span>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© 2026 KSite</span>
+            <span>Educatieve demo • Geen medisch advies</span>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
