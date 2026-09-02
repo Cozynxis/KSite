@@ -1,1 +1,270 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Profiel — KSite</title><link rel="stylesheet" href="assets/css/style.css"></head><body data-page="profile"><div class="noise"></div><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span><small>beta</small></a><nav class="desktop-nav"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a></nav><div class="nav-actions"><button class="icon-btn" id="themeBtn">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a><a href="profiel.html">Profiel</a></div><main><section class="page-hero wrap reveal"><span class="kicker">Jouw KSite</span><h1>Profiel & voortgang</h1><p>Alles op deze pagina wordt alleen in je eigen browser opgeslagen. Voor deze statische demo is geen account nodig.</p></section><section class="wrap section-space" style="padding-top:10px"><div class="profile-grid"><aside class="profile-card reveal"><div class="profile-avatar">K</div><span class="kicker">Lokale gebruiker</span><h2 style="font-size:30px;margin:8px 0">KSite Explorer</h2><p style="color:var(--muted);font-size:13px">Leer, test je kennis en verzamel XP.</p><div class="fact-box"><b>Plan</b><p data-plan>FREE</p></div><a href="plus.html" class="btn primary" style="width:100%;margin-top:14px">Bekijk KSite Plus</a></aside><div style="display:grid;gap:18px"><section class="dashboard-card reveal delay-1"><span class="kicker">Overzicht</span><h2 style="margin:8px 0 22px">Jouw statistieken</h2><div class="stat-row"><div class="stat-box"><b data-xp>0</b><span>TOTAAL XP</span></div><div class="stat-box"><b data-lessons>0/8</b><span>LESSEN</span></div><div class="stat-box"><b>Lv. <span data-level>1</span></b><span>NIVEAU</span></div></div></section><section class="dashboard-card reveal delay-2"><div style="display:flex;justify-content:space-between;gap:20px;align-items:center"><div><span class="kicker">Naar volgend niveau</span><h3 style="margin:8px 0">Elke 200 XP ga je omhoog</h3></div><strong data-xp>0</strong></div><div class="course-progress" style="height:9px;margin-top:20px"><span id="xpFill"></span></div></section><section class="dashboard-card reveal"><span class="kicker">Aanbevolen</span><h3 style="margin:8px 0 16px">Ga verder met leren</h3><div class="cards-2"><a class="fact-box" style="margin:0" href="lessen.html"><b>Academy →</b><p>Voltooi een module voor 50 XP.</p></a><a class="fact-box" style="margin:0" href="quiz.html"><b>Kennisquiz →</b><p>Verdien tot 80 XP per ronde.</p></a></div></section></div></div></section></main><footer><div class="wrap footer-bottom"><span>© 2026 KSite</span><span>Lokale demo-opslag via je browser</span></div></footer><div class="toast" id="toast"></div><script src="assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bekijk je KSite profiel, XP, level, lessen, badges en lokale leerstatistieken.">
+    <title>KSite — Profiel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="profile">
+    <div class="page-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span class="brand-copy">
+                <strong>KSite</strong>
+                <small>Kennis • Tast • Reflexen</small>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="ontdek.html">Ontdek</a>
+            <a href="lessen.html">Lessen</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="plus.html">Plus</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeBtn" type="button">◐</button>
+            <a class="profile-pill" href="profiel.html">
+                <span class="avatar">K</span>
+                <span>Profiel</span>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button">☰</button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="ontdek.html">Ontdek</a>
+        <a href="lessen.html">Lessen</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="plus.html">Plus</a>
+        <a class="active" href="profiel.html">Profiel</a>
+    </nav>
+
+    <main>
+        <section class="page-hero container reveal">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Profiel</span>
+            </div>
+            <span class="eyebrow">MIJN KSITE</span>
+            <h1>Jouw leerprofiel, <span class="gradient-text">op één plek.</span></h1>
+            <p class="page-lead">Volg je XP, level, afgeronde modules, badges en quizprestaties. Alles blijft lokaal opgeslagen.</p>
+        </section>
+
+        <section class="section compact container reveal">
+            <div class="profile-layout">
+                <aside class="profile-card">
+                    <div class="profile-avatar-large">K</div>
+                    <span class="eyebrow">LEERLING</span>
+                    <h2 class="mt-8" data-display-name>KSite Leerling</h2>
+                    <p class="text-soft mt-8">Bouw je profiel uit door lessen en quizzen te voltooien.</p>
+                    <div class="divider"></div>
+                    <label class="text-muted" for="displayNameInput">Weergavenaam</label>
+                    <input class="form-input mt-8" id="displayNameInput" maxlength="32" placeholder="KSite Leerling">
+                    <button class="btn primary small mt-16" id="saveProfileBtn" type="button">Naam opslaan</button>
+                    <div class="divider"></div>
+                    <div class="topic-meta">
+                        <span>Plus: <strong data-plus-status>Niet actief</strong></span>
+                        <span>Streak: <strong data-streak>1</strong> dag</span>
+                    </div>
+                </aside>
+
+                <div>
+                    <div class="dashboard-grid">
+                        <article class="dashboard-card">
+                            <span class="eyebrow">LEVEL</span>
+                            <div class="metric-value" id="profileLevel">1</div>
+                            <p>Iedere 250 XP stijg je één level.</p>
+                        </article>
+                        <article class="dashboard-card">
+                            <span class="eyebrow">TOTAAL XP</span>
+                            <div class="metric-value" id="profileXp">0</div>
+                            <p>Verdiend via lessen en quizzen.</p>
+                        </article>
+                        <article class="dashboard-card">
+                            <span class="eyebrow">LESSEN</span>
+                            <div class="metric-value" id="profileLessons">0</div>
+                            <p>Voltooide modules op deze browser.</p>
+                        </article>
+                    </div>
+
+                    <article class="profile-card mt-24">
+                        <div class="section-heading">
+                            <div>
+                                <span class="eyebrow">LEVELVOORTGANG</span>
+                                <h2>Naar je volgende level</h2>
+                            </div>
+                            <a class="btn secondary small" href="lessen.html">Verdien XP</a>
+                        </div>
+                        <div class="progress-track">
+                            <span id="profileProgress" style="width:0%"></span>
+                        </div>
+                        <p class="text-muted mt-16">Je progressiebalk begint opnieuw na iedere 250 XP.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">BADGES</span>
+                    <h2>Ontgrendel mijlpalen</h2>
+                </div>
+                <p>Badges worden automatisch actief wanneer je aan de voorwaarden voldoet.</p>
+            </div>
+
+            <div class="badge-grid">
+                <article class="badge-card locked" data-badge="starter">
+                    <span class="badge-icon">✦</span>
+                    <strong>Starter</strong>
+                    <p class="text-muted">Verdien je eerste XP.</p>
+                </article>
+                <article class="badge-card locked" data-badge="learner">
+                    <span class="badge-icon">▦</span>
+                    <strong>Learner</strong>
+                    <p class="text-muted">Voltooi 2 lessen.</p>
+                </article>
+                <article class="badge-card locked" data-badge="scholar">
+                    <span class="badge-icon">◇</span>
+                    <strong>Scholar</strong>
+                    <p class="text-muted">Voltooi 5 lessen.</p>
+                </article>
+                <article class="badge-card locked" data-badge="quizzer">
+                    <span class="badge-icon">?</span>
+                    <strong>Quizzer</strong>
+                    <p class="text-muted">Rond een quiz af.</p>
+                </article>
+                <article class="badge-card locked" data-badge="streak">
+                    <span class="badge-icon">↟</span>
+                    <strong>Streak</strong>
+                    <p class="text-muted">Bezoek KSite 3 dagen op rij.</p>
+                </article>
+                <article class="badge-card locked" data-badge="plus">
+                    <span class="badge-icon">+</span>
+                    <strong>Plus</strong>
+                    <p class="text-muted">Activeer de Plus-demo.</p>
+                </article>
+                <article class="badge-card locked" data-badge="expert">
+                    <span class="badge-icon">★</span>
+                    <strong>Expert</strong>
+                    <p class="text-muted">Bereik 1000 XP.</p>
+                </article>
+                <article class="badge-card locked" data-badge="complete">
+                    <span class="badge-icon">✓</span>
+                    <strong>Compleet</strong>
+                    <p class="text-muted">Voltooi alle modules.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">LEEROVERZICHT</span>
+                    <h2>Waar je profiel op gebaseerd is</h2>
+                </div>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-icon">XP</span>
+                    <h3>Experience Points</h3>
+                    <p>XP laat zien hoeveel activiteiten je hebt afgerond. Het is een speelse voortgangsindicator, geen schoolcijfer.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">LV</span>
+                    <h3>Levels</h3>
+                    <p>Je level stijgt automatisch met je XP. Zo zie je in één oogopslag hoeveel je het platform hebt gebruikt.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">✓</span>
+                    <h3>Modules</h3>
+                    <p>Iedere les kan één keer als voltooid worden gemarkeerd. Daarna blijft de module als afgerond staan.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon">★</span>
+                    <h3>Badges</h3>
+                    <p>Badges zijn kleine doelen die meerdere onderdelen van KSite met elkaar verbinden.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="split-layout">
+                <article class="content-card large-card">
+                    <span class="eyebrow">LOKALE OPSLAG</span>
+                    <h2>Jouw demo-data blijft in je browser</h2>
+                    <p>KSite gebruikt voor deze statische versie localStorage. Daardoor is geen accountserver nodig om je voortgang te bewaren.</p>
+                    <p>Gebruik je een andere browser, een ander apparaat of verwijder je browserdata, dan kan deze lokale voortgang verdwijnen.</p>
+                    <p>Voor een toekomstige echte accountversie zou een beveiligde backend nodig zijn.</p>
+                </article>
+                <aside class="fact-stack">
+                    <article class="mini-card">
+                        <span class="mini-label">PRIVACY</span>
+                        <h3>Geen externe profielserver</h3>
+                        <p>De huidige demo verstuurt je XP en voortgang niet naar een KSite-database.</p>
+                    </article>
+                    <article class="mini-card">
+                        <span class="mini-label">RESET</span>
+                        <h3>Opnieuw beginnen</h3>
+                        <p>Je kunt hieronder je lokale XP, lessen en quizscores wissen.</p>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="respect-banner">
+                <div>
+                    <span class="eyebrow">INSTELLINGEN</span>
+                    <h2>Voortgang resetten</h2>
+                    <p>Hiermee verwijder je XP, afgeronde lessen en quizresultaten uit deze browser. Je thema en Plus-status blijven behouden.</p>
+                </div>
+                <button class="btn secondary" data-reset-progress type="button">Wis lokale voortgang</button>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="cta-panel">
+                <div>
+                    <span class="eyebrow">VOLGENDE DOEL</span>
+                    <h2>Verdien je volgende badge.</h2>
+                    <p>Ga verder met een les, verbeter je quizscore of ontdek wat Plus toevoegt.</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn primary" href="lessen.html">Naar lessen</a>
+                    <a class="btn secondary" href="plus.html">Bekijk Plus</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">K</span>
+                    <span class="brand-copy"><strong>KSite</strong><small>Educatief platform</small></span>
+                </a>
+                <p>Jouw persoonlijke leeromgeving voor KSite.</p>
+            </div>
+            <div class="footer-column"><strong>Leren</strong><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a></div>
+            <div class="footer-column"><strong>Profiel</strong><a href="profiel.html">Voortgang</a><a href="plus.html">KSite Plus</a><a href="plus-dashboard.html">Dashboard</a></div>
+            <div class="footer-column"><strong>Data</strong><span>LocalStorage</span><span>Geen tracking</span><span>Browser-based</span></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 KSite</span><span>Educatieve demo • Geen medisch advies</span></div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
