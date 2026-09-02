@@ -1,1 +1,270 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Plus Dashboard — KSite</title><link rel="stylesheet" href="assets/css/style.css"></head><body data-page="plus-dashboard"><div class="noise"></div><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span><small>PLUS</small></a><nav class="desktop-nav"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a class="active" href="plus-dashboard.html">Dashboard</a></nav><div class="nav-actions"><button class="icon-btn" id="themeBtn">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="profiel.html">Profiel</a></div><main class="plus-dashboard"><aside class="dash-side"><span class="plus-chip">KSite <b>PLUS</b></span><nav><a class="active" href="plus-dashboard.html">▦ Overzicht</a><a href="lessen.html">★ Plus lessen</a><a href="quiz.html">✓ Quiz</a><a href="profiel.html">◫ Statistieken</a><a href="ontdek.html">⌁ Kennisbank</a></nav><button class="btn ghost" id="deactivatePlus" style="width:100%;margin-top:30px">Plus demo uitzetten</button></aside><section class="dash-main"><div class="section-head"><div><span class="kicker">Plus Dashboard</span><h2>Welkom terug 👋</h2><p>Je persoonlijke leeromgeving met extra modules en inzicht.</p></div><span class="plus-chip">ACTIEF</span></div><div class="dash-grid"><article class="dashboard-card reveal"><span class="tag">Totaal XP</span><h3 style="font-size:38px;margin-top:8px" data-xp>0</h3><p style="color:var(--muted);font-size:12px">Blijf modules voltooien om verder te groeien.</p></article><article class="dashboard-card reveal delay-1"><span class="tag">Lessen voltooid</span><h3 style="font-size:38px;margin-top:8px" data-lessons>0/8</h3><p style="color:var(--muted);font-size:12px">Inclusief Plus-verdiepingsmodules.</p></article><article class="dashboard-card reveal delay-2"><span class="tag">Niveau</span><h3 style="font-size:38px;margin-top:8px">Lv. <span data-level>1</span></h3><p style="color:var(--muted);font-size:12px">Elke 200 XP stijg je een niveau.</p></article><article class="dashboard-card big-card reveal"><span class="kicker">Verder leren</span><h3 style="font-size:28px;margin:8px 0">Plus-verdieping</h3><p style="color:var(--muted)">Je hebt nu toegang tot de extra modules over grenzen, toestemming en voorspellende verwerking in de hersenen.</p><div class="cards-2" style="margin-top:18px"><a class="fact-box" style="margin:0" href="lessen.html"><b>Module 07</b><p>Grenzen & toestemming →</p></a><a class="fact-box" style="margin:0" href="lessen.html"><b>Module 08</b><p>Breinvoorspelling →</p></a></div></article><article class="dashboard-card reveal delay-1"><span class="kicker">Progressie</span><div style="display:grid;place-items:center;padding:16px"><div class="progress-ring" style="--p:68%"><b>68%</b></div></div><p style="text-align:center;color:var(--muted);font-size:12px">Voorbeeld van je Plus-leerdoel.</p></article><article class="dashboard-card reveal"><span class="kicker">Wekelijkse focus</span><h3 style="margin:8px 0">3 korte doelen</h3><div class="fact-box"><b>✓ Voltooi 1 les</b></div><div class="fact-box"><b>○ Maak de quiz</b></div><div class="fact-box"><b>○ Lees 2 kenniskaarten</b></div></article><article class="dashboard-card big-card reveal delay-1"><span class="kicker">Plus inzicht</span><h3 style="margin:8px 0">Wat bepaalt hoe sterk je iets voelt?</h3><p style="color:var(--muted)">Niet één factor. Receptorinformatie, aandacht, verwachting, context en eerdere ervaring kunnen allemaal invloed hebben. Daarom is een persoonlijke reactie nooit volledig te voorspellen vanuit één lichaamskaart.</p><a href="ontdek.html" class="text-link">Open de interactieve kennisbank →</a></article></div></section></main><div class="toast" id="toast"></div><script src="assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Het uitgebreide KSite Plus dashboard met voortgang, statistieken en extra educatieve functies.">
+    <title>KSite — Plus Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="plus-dashboard">
+    <div class="page-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span class="brand-copy">
+                <strong>KSite Plus</strong>
+                <small>Premium leeromgeving</small>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="ontdek.html">Ontdek</a>
+            <a href="lessen.html">Lessen</a>
+            <a href="quiz.html">Quiz</a>
+            <a class="active" href="plus-dashboard.html">Dashboard</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeBtn" type="button">◐</button>
+            <a class="profile-pill" href="profiel.html">
+                <span class="avatar">K</span>
+                <span>Profiel</span>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button">☰</button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="ontdek.html">Ontdek</a>
+        <a href="lessen.html">Lessen</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="plus.html">Plus</a>
+        <a class="active" href="plus-dashboard.html">Dashboard</a>
+        <a href="profiel.html">Profiel</a>
+    </nav>
+
+    <main>
+        <section class="page-hero center container reveal" id="plusGate">
+            <span class="eyebrow">PLUS VEREIST</span>
+            <h1>Dit dashboard hoort bij <span class="gradient-text">KSite Plus.</span></h1>
+            <p class="page-lead">Activeer eerst de gratis lokale Plus-demo. Daarna wordt het complete dashboard zichtbaar.</p>
+            <div class="hero-actions" style="justify-content:center">
+                <a class="btn primary" href="plus.html">Naar KSite Plus</a>
+                <a class="btn secondary" href="index.html">Terug naar home</a>
+            </div>
+        </section>
+
+        <div class="container dashboard-shell hidden" id="plusDashboardContent">
+            <aside class="dashboard-sidebar">
+                <a class="active" href="#overzicht">Overzicht</a>
+                <a href="#voortgang">Voortgang</a>
+                <a href="#modules">Plus modules</a>
+                <a href="#inzichten">Inzichten</a>
+                <a href="#aanbevolen">Aanbevolen</a>
+                <a href="#instellingen">Instellingen</a>
+            </aside>
+
+            <div class="dashboard-main">
+                <section class="section compact reveal" id="overzicht">
+                    <span class="eyebrow">PLUS DASHBOARD</span>
+                    <h1 class="mt-8">Welkom terug, <span data-display-name>KSite Leerling</span>.</h1>
+                    <p class="page-lead">Hier vind je je belangrijkste voortgang, aanbevelingen en Plus-inzichten op één plek.</p>
+                </section>
+
+                <section class="section compact reveal">
+                    <div class="dashboard-grid">
+                        <article class="dashboard-card">
+                            <span class="eyebrow">LEVEL</span>
+                            <div class="metric-value" id="dashboardLevel">1</div>
+                            <p>Je huidige KSite-level.</p>
+                        </article>
+                        <article class="dashboard-card">
+                            <span class="eyebrow">XP</span>
+                            <div class="metric-value" id="dashboardXp">0</div>
+                            <p>Totaal verdiende experience points.</p>
+                        </article>
+                        <article class="dashboard-card">
+                            <span class="eyebrow">LESSEN</span>
+                            <div class="metric-value" id="dashboardLessons">0</div>
+                            <p>Voltooide modules.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section compact reveal" id="voortgang">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">VOORTGANG</span>
+                            <h2>Activiteitsoverzicht</h2>
+                        </div>
+                        <a class="btn secondary small" href="profiel.html">Open profiel</a>
+                    </div>
+                    <div class="split-layout">
+                        <article class="dashboard-card">
+                            <span class="eyebrow">LEVELPROGRESSIE</span>
+                            <h3 class="mt-8">Op weg naar het volgende level</h3>
+                            <div class="progress-track mt-24">
+                                <span id="dashboardProgress" style="width:0%"></span>
+                            </div>
+                            <p>Iedere 250 XP start een nieuw level.</p>
+                        </article>
+                        <article class="dashboard-card">
+                            <span class="eyebrow">LEERSTREAK</span>
+                            <div class="metric-value"><span data-streak>1</span> dag</div>
+                            <p>Open KSite op opeenvolgende dagen om je lokale streak te verhogen.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section compact reveal" id="inzichten">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">ACTIVITEIT</span>
+                            <h2>Visuele leertrend</h2>
+                        </div>
+                        <p>Een demo-visualisatie gebaseerd op je huidige levelprogressie.</p>
+                    </div>
+                    <article class="dashboard-card">
+                        <div class="chart-bars" aria-label="Demo activiteit grafiek">
+                            <span style="height:24%"></span>
+                            <span style="height:40%"></span>
+                            <span style="height:32%"></span>
+                            <span style="height:54%"></span>
+                            <span style="height:68%"></span>
+                            <span style="height:48%"></span>
+                            <span style="height:76%"></span>
+                            <span style="height:62%"></span>
+                            <span style="height:88%"></span>
+                            <span style="height:72%"></span>
+                        </div>
+                        <div class="topic-meta">
+                            <span>Demo data</span>
+                            <span>Lokale browser</span>
+                            <span>Geen externe analytics</span>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="section compact reveal" id="modules">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">PLUS MODULES</span>
+                            <h2>Extra verdieping</h2>
+                        </div>
+                        <a class="btn secondary small" href="lessen.html">Alle lessen</a>
+                    </div>
+                    <div class="topic-grid">
+                        <article class="topic-card">
+                            <span class="topic-icon">≈</span>
+                            <h3>Waarom iedereen anders reageert</h3>
+                            <p>Verdieping over persoonlijke verschillen, aandacht, gewenning en context.</p>
+                            <div class="topic-meta"><span>Plus</span><span>8 min</span><span>60 XP</span></div>
+                        </article>
+                        <article class="topic-card">
+                            <span class="topic-icon">↻</span>
+                            <h3>Voorspelling in het brein</h3>
+                            <p>Meer over hoe je brein eigen bewegingen en verwachte zintuiglijke gevolgen combineert.</p>
+                            <div class="topic-meta"><span>Plus</span><span>10 min</span><span>70 XP</span></div>
+                        </article>
+                        <article class="topic-card">
+                            <span class="topic-icon">◇</span>
+                            <h3>Samenvattingshub</h3>
+                            <p>Gebruik alle kernbegrippen uit KSite als een compact overzicht om later terug te lezen.</p>
+                            <div class="topic-meta"><span>Plus</span><span>Overzicht</span><span>Herhalen</span></div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section compact reveal" id="aanbevolen">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">AANBEVOLEN</span>
+                            <h2>Wat kun je nu doen?</h2>
+                        </div>
+                    </div>
+                    <div class="feature-grid">
+                        <a class="feature-card" href="lessen.html">
+                            <span class="feature-icon">▦</span>
+                            <h3>Voltooi een module</h3>
+                            <p>Ga verder in je leerpad en verdien XP voor je profiel.</p>
+                            <span class="card-link">Open lessen →</span>
+                        </a>
+                        <a class="feature-card" href="quiz.html">
+                            <span class="feature-icon">?</span>
+                            <h3>Verbeter je quizscore</h3>
+                            <p>Test onderwerpen uit meerdere modules en lees de uitleg na ieder antwoord.</p>
+                            <span class="card-link">Start quiz →</span>
+                        </a>
+                        <a class="feature-card" href="ontdek.html">
+                            <span class="feature-icon">◎</span>
+                            <h3>Zoek een begrip</h3>
+                            <p>Gebruik de kennisbank om een onderwerp snel opnieuw te bekijken.</p>
+                            <span class="card-link">Kennisbank →</span>
+                        </a>
+                        <a class="feature-card" href="profiel.html">
+                            <span class="feature-icon">★</span>
+                            <h3>Check je badges</h3>
+                            <p>Bekijk welke mijlpalen al zijn ontgrendeld en welke doelen nog openstaan.</p>
+                            <span class="card-link">Mijn profiel →</span>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="section compact reveal">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">PLUS INZICHTEN</span>
+                            <h2>Belangrijke leerpunten</h2>
+                        </div>
+                    </div>
+                    <table class="info-table">
+                        <thead>
+                            <tr><th>Thema</th><th>Kernidee</th><th>Volgende stap</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Tast</td><td>Meerdere receptoren dragen verschillende informatie.</td><td>Herhaal module 1.</td></tr>
+                            <tr><td>Zenuwen</td><td>Mechanische prikkels worden omgezet in zenuwsignalen.</td><td>Bekijk module 2.</td></tr>
+                            <tr><td>Hersenen</td><td>Verwachting en aandacht beïnvloeden verwerking.</td><td>Open Plus module 7.</td></tr>
+                            <tr><td>Verschillen</td><td>Er bestaat geen universele gevoeligheidskaart.</td><td>Open Plus module 6.</td></tr>
+                            <tr><td>Grenzen</td><td>Automatische reacties zijn geen toestemming.</td><td>Herhaal module 8.</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section class="section compact reveal" id="instellingen">
+                    <div class="respect-banner">
+                        <div>
+                            <span class="eyebrow">PLUS INSTELLINGEN</span>
+                            <h2>Demo beheren</h2>
+                            <p>Wil je terug naar de gratis ervaring? Je kunt Plus lokaal uitschakelen. Je gewone XP en lesvoortgang blijven bestaan.</p>
+                        </div>
+                        <button class="btn secondary" id="disablePlusBtn" type="button">Schakel Plus uit</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Plus</strong><small>Premium demo</small></span></a>
+                <p>De uitgebreide dashboardomgeving van KSite.</p>
+            </div>
+            <div class="footer-column"><strong>Dashboard</strong><a href="#overzicht">Overzicht</a><a href="#modules">Modules</a><a href="#inzichten">Inzichten</a></div>
+            <div class="footer-column"><strong>KSite</strong><a href="index.html">Home</a><a href="lessen.html">Lessen</a><a href="profiel.html">Profiel</a></div>
+            <div class="footer-column"><strong>Demo</strong><span>LocalStorage</span><span>Geen betaling</span><span>Geen tracking</span></div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 KSite</span><span>KSite Plus demo • Geen medisch advies</span></div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
