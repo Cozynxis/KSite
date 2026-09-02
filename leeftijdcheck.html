@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KSite Plus readiness-check met leeftijdsconsistentie, privacy, grenzen en veiligheidsvragen.">
+    <title>KSite Plus — Readiness Check</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=3.2">
+    <link rel="stylesheet" href="assets/css/plus.css?v=3.2">
+</head>
+<body data-page="readiness">
+    <div class="page-background" aria-hidden="true"><span class="orb orb-one"></span><span class="orb orb-two"></span><span class="orb orb-three"></span></div>
+
+    <header class="topbar">
+        <a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Plus</strong><small>Readiness Check</small></span></a>
+        <nav class="desktop-nav"><a href="index.html">Home</a><a href="plus.html">Plus</a><a href="plus-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a></nav>
+        <div class="nav-actions"><button class="icon-btn" id="themeBtn" type="button">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn" type="button">☰</button></div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="plus.html">Plus</a><a href="plus-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a><a href="profiel.html">Profiel</a></nav>
+
+    <main>
+        <section class="section container">
+            <div class="readiness-card reveal">
+                <div class="readiness-header">
+                    <span class="eyebrow">ADVANCED PLUS</span>
+                    <h1>Leeftijd & Readiness Check</h1>
+                    <p>Deze uitgebreide lokale check kijkt of je leeftijdsgegevens logisch overeenkomen en of je basisregels over toestemming, privacy en veiligheid begrijpt. Hij vraagt niet naar intieme lichaamskenmerken en is geen officiële identiteitscontrole.</p>
+                </div>
+
+                <div class="readiness-progress-wrap">
+                    <div class="readiness-progress-meta"><span id="readinessProgressText">Stap 1 van 4</span><span>Lokale check</span></div>
+                    <div class="readiness-progress"><span id="readinessProgressBar"></span></div>
+                </div>
+
+                <form class="readiness-body" id="readinessForm">
+                    <section class="readiness-step active">
+                        <span class="eyebrow">STAP 1</span>
+                        <h2>Leeftijdsconsistentie</h2>
+                        <p>De browser vergelijkt je opgegeven leeftijd met je geboortejaar. Omdat alleen een geboortejaar wordt gebruikt, kan er ongeveer één jaar verschil zitten.</p>
+                        <div class="readiness-field">
+                            <label for="birthYear">In welk jaar ben je geboren?</label>
+                            <input id="birthYear" name="birthYear" type="number" min="1900" max="2026" placeholder="Bijvoorbeeld 2010" required>
+                            <span class="readiness-hint">Alleen het jaar wordt lokaal opgeslagen. Geen volledige geboortedatum.</span>
+                        </div>
+                        <div class="readiness-field">
+                            <label for="claimedAge">Hoe oud ben je nu?</label>
+                            <input id="claimedAge" name="claimedAge" type="number" min="1" max="120" placeholder="Vul je leeftijd in" required>
+                            <span class="readiness-hint">Het systeem controleert automatisch of dit logisch past bij het geboortejaar.</span>
+                        </div>
+                        <div class="notice"><strong>Privacy:</strong> deze check vraagt niet naar schaamhaar, geslachtsdelen, naaktfoto's, seksuele ervaring of andere intieme informatie.</div>
+                        <div class="readiness-actions"><a class="btn ghost" href="plus.html">Annuleren</a><button class="btn primary" data-readiness-next type="button">Volgende stap</button></div>
+                    </section>
+
+                    <section class="readiness-step">
+                        <span class="eyebrow">STAP 2</span>
+                        <h2>Grenzen & toestemming</h2>
+                        <p>Kies steeds het antwoord dat volgens KSite het veiligst en duidelijkst is.</p>
+
+                        <div class="readiness-question">
+                            <strong>Iemand zegt “stop” tijdens lichamelijk contact. Wat hoort er te gebeuren?</strong>
+                            <div class="readiness-options">
+                                <label class="readiness-option"><input type="radio" name="consent" value="continue" required> Nog even doorgaan als diegene lacht.</label>
+                                <label class="readiness-option"><input type="radio" name="consent" value="stop" required> Meteen stoppen en ruimte geven.</label>
+                                <label class="readiness-option"><input type="radio" name="consent" value="ask-later" required> Eerst doorgaan en later vragen.</label>
+                            </div>
+                        </div>
+
+                        <div class="readiness-question">
+                            <strong>Betekent lachen automatisch dat iemand aanraking leuk vindt of toestemming geeft?</strong>
+                            <div class="readiness-options">
+                                <label class="readiness-option"><input type="radio" name="laughter" value="yes" required> Ja, lachen is altijd toestemming.</label>
+                                <label class="readiness-option"><input type="radio" name="laughter" value="no" required> Nee, lachen kan automatisch zijn en zegt niets zekers over toestemming.</label>
+                            </div>
+                        </div>
+
+                        <div class="readiness-question">
+                            <strong>Wat is de beste aanpak vóór lichamelijk contact?</strong>
+                            <div class="readiness-options">
+                                <label class="readiness-option"><input type="radio" name="boundaries" value="guess" required> Zelf inschatten of iemand het wel oké vindt.</label>
+                                <label class="readiness-option"><input type="radio" name="boundaries" value="ask" required> Eerst duidelijk vragen en een antwoord respecteren.</label>
+                            </div>
+                        </div>
+
+                        <div class="readiness-actions"><button class="btn secondary" data-readiness-back type="button">Terug</button><button class="btn primary" data-readiness-next type="button">Volgende stap</button></div>
+                    </section>
+
+                    <section class="readiness-step">
+                        <span class="eyebrow">STAP 3</span>
+                        <h2>Privacy & veiligheid</h2>
+                        <p>Advanced Plus draait om kennis. Deze vragen checken of je begrijpt wat KSite nooit van iemand hoort te vragen.</p>
+
+                        <div class="readiness-question">
+                            <strong>Iemand voelt druk om mee te doen aan een lichamelijke challenge. Wat is de juiste keuze?</strong>
+                            <div class="readiness-options">
+                                <label class="readiness-option"><input type="radio" name="pressure" value="push" required> Toch proberen omdat het een challenge is.</label>
+                                <label class="readiness-option"><input type="radio" name="pressure" value="leave" required> Niet meedoen; deelname hoort vrijwillig te zijn.</label>
+                            </div>
+                        </div>
+
+                        <div class="readiness-question">
+                            <strong>Welke informatie hoeft een educatieve KSite-check NIET te verzamelen?</strong>
+                            <div class="readiness-options">
+                                <label class="readiness-option"><input type="radio" name="privacy" value="sensitive" required> Details over intieme lichaamskenmerken.</label>
+                                <label class="readiness-option"><input type="radio" name="privacy" value="no-sensitive" required> Intieme informatie hoort juist niet gevraagd te worden.</label>
+                            </div>
+                        </div>
+
+                        <div class="readiness-question">
+                            <strong>Wat doe je als iemand zich onveilig, duizelig of niet goed voelt tijdens een activiteit?</strong>
+                            <div class="readiness-options">
+                                <label class="readiness-option"><input type="radio" name="emergency" value="continue" required> Doorgaan om de opdracht af te maken.</label>
+                                <label class="readiness-option"><input type="radio" name="emergency" value="stop-help" required> Stoppen en zo nodig hulp van een vertrouwde volwassene of professional vragen.</label>
+                            </div>
+                        </div>
+
+                        <div class="readiness-actions"><button class="btn secondary" data-readiness-back type="button">Terug</button><button class="btn primary" data-readiness-next type="button">Volgende stap</button></div>
+                    </section>
+
+                    <section class="readiness-step">
+                        <span class="eyebrow">STAP 4</span>
+                        <h2>Laatste bevestiging</h2>
+                        <p>Bevestig dat je begrijpt waarvoor deze check bedoeld is.</p>
+
+                        <div class="readiness-question">
+                            <label class="readiness-option"><input id="understandRules" type="checkbox" required> Ik begrijp dat lachen of bewegen geen toestemming vervangt en dat “stop” altijd gerespecteerd wordt.</label>
+                        </div>
+                        <div class="readiness-question">
+                            <label class="readiness-option"><input id="voluntaryUse" type="checkbox" required> Ik begrijp dat KSite-activiteiten vrijwillig, educatief en zonder druk horen te zijn.</label>
+                        </div>
+
+                        <div class="notice"><strong>Belangrijk:</strong> deze browsercheck kan niet bewijzen wie iemand echt is. Hij kan alleen ingevoerde gegevens op logica controleren en kennisvragen beoordelen.</div>
+                        <div class="readiness-actions"><button class="btn secondary" data-readiness-back type="button">Terug</button><button class="btn primary" type="submit">Controleer antwoorden</button></div>
+                    </section>
+
+                    <div class="readiness-result" id="readinessResult"></div>
+                    <div class="readiness-actions"><button class="btn ghost" id="resetReadiness" type="button">Reset volledige check</button><a class="btn secondary" href="plus-dashboard.html">Naar dashboard</a></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section compact container reveal">
+            <div class="split-layout">
+                <article class="content-card"><span class="eyebrow">WAT WORDT GECHECKT?</span><h2>Vier onderdelen</h2><p>1. Logische overeenkomst tussen geboortejaar en opgegeven leeftijd. 2. Begrip van stoppen en toestemming. 3. Privacy en vrijwilligheid. 4. Bevestiging van veiligheidsregels.</p></article>
+                <aside class="fact-stack"><article class="mini-card"><span class="mini-label">SCORE</span><h3 data-readiness-score>—</h3><p>Je laatst berekende lokale readiness-score.</p></article><article class="mini-card"><span class="mini-label">STATUS</span><h3 data-kplus-readiness>Nog niet voltooid</h3><p>Een geslaagde check ontgrendelt alleen veilige Advanced Plus leercontent.</p></article></aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">K</span><span class="brand-copy"><strong>KSite Plus</strong><small>Readiness</small></span></a><p>Een privacyvriendelijke lokale kennis- en veiligheidscheck.</p></div><div class="footer-column"><strong>Plus</strong><a href="plus.html">Abonnement</a><a href="plus-dashboard.html">Dashboard</a><a href="challenges.html">Challenges</a></div><div class="footer-column"><strong>Kennis</strong><a href="kietelen.html">Kietelen</a><a href="plekken.html">Plekken</a><a href="lessen.html">Lessen</a></div><div class="footer-column"><strong>Privacy</strong><span>Geen intieme vragen</span><span>Geen foto's</span><span>Lokale opslag</span></div></div><div class="container footer-bottom"><span>© 2026 KSite</span><span>Geen officiële identiteitsverificatie</span></div></footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js?v=3.2"></script>
+    <script src="assets/js/plus.js?v=3.2"></script>
+</body>
+</html>
