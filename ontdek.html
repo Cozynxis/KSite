@@ -1,1 +1,332 @@
-<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ontdek — KSite</title><link rel="stylesheet" href="assets/css/style.css"></head><body data-page="discover"><div class="noise"></div><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">K</span><span>KSite</span><small>beta</small></a><nav class="desktop-nav"><a href="index.html">Home</a><a class="active" href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a></nav><div class="nav-actions"><button class="icon-btn" id="themeBtn">◐</button><a class="profile-pill" href="profiel.html"><span class="avatar">K</span><span>Profiel</span></a><button class="menu-btn" id="menuBtn">☰</button></div></header><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="ontdek.html">Ontdek</a><a href="lessen.html">Lessen</a><a href="quiz.html">Quiz</a><a href="plus.html">Plus</a><a href="profiel.html">Profiel</a></div><main><section class="page-hero wrap reveal"><span class="kicker">Interactieve kennisbank</span><h1>Ontdek hoe gevoel <span>werkt.</span></h1><p>Klik op een onderwerp en ontdek hoe huid, zenuwen, hersenen, reflexen, verwachting en grenzen samenhangen.</p></section><section class="wrap section-space" style="padding-top:20px"><div class="body-map reveal"><div class="body-list" id="bodyList"><button class="body-btn" data-topic="huid">✦ Huid & receptoren</button><button class="body-btn" data-topic="handen">✋ Handen</button><button class="body-btn" data-topic="voeten">◌ Voeten</button><button class="body-btn" data-topic="armen">↯ Armen & zij</button><button class="body-btn" data-topic="zenuwen">⚡ Zenuwstelsel</button><button class="body-btn" data-topic="hersenen">🧠 Hersenen & voorspelling</button><button class="body-btn" data-topic="reflexen">↯ Reflexen & lachen</button><button class="body-btn" data-topic="grenzen">♡ Grenzen & toestemming</button></div><div class="detail-panel" id="detailPanel"></div></div></section><section class="wide-band" id="hersenen"><div class="wrap cards-2"><article class="info-card reveal"><span class="kicker">Feit of fabel</span><h3>“Lachen betekent dat iemand het leuk vindt.”</h3><p><strong>Fabel.</strong> Lachen kan tijdens kietelen automatisch ontstaan. Vraag dus altijd wat iemand zelf wil en baseer toestemming nooit alleen op een reactie.</p></article><article class="info-card reveal delay-1"><span class="kicker">Feit of fabel</span><h3>“Iedereen is op dezelfde plekken kietelig.”</h3><p><strong>Fabel.</strong> Er zijn algemene verschillen in tastgevoeligheid, maar persoonlijke reacties verschillen enorm en zijn niet betrouwbaar uit een kaart af te lezen.</p></article><article class="info-card reveal"><span class="kicker">Feit</span><h3>Je brein voorspelt eigen bewegingen.</h3><p>Zelfgemaakte aanraking is minder onverwacht omdat het brein een voorspelling van de sensorische gevolgen kan maken. Dat helpt verklaren waarom jezelf kietelen vaak minder effect heeft.</p></article><article class="info-card reveal delay-1" id="grenzen"><span class="kicker">Veiligheid</span><h3>Toestemming is steeds opnieuw belangrijk.</h3><p>Iemand mag altijd van gedachten veranderen. “Stop”, “nee”, wegbewegen of duidelijk ongemak betekent meteen stoppen. Grenzen respecteren hoort bij elke vorm van aanraking.</p></article></div></section></main><footer><div class="wrap footer-bottom"><span>© 2026 KSite</span><span>Educatieve informatie — geen medisch advies</span></div></footer><div class="toast" id="toast"></div><script src="assets/js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ontdek uitgebreide educatieve informatie over tast, zenuwen, hersenen, reflexen en gevoeligheid.">
+    <title>KSite — Ontdek</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="discover">
+    <div class="page-background" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">K</span>
+            <span class="brand-copy">
+                <strong>KSite</strong>
+                <small>Kennis • Tast • Reflexen</small>
+            </span>
+        </a>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a class="active" href="ontdek.html">Ontdek</a>
+            <a href="lessen.html">Lessen</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="plus.html">Plus</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeBtn" type="button">◐</button>
+            <a class="profile-pill" href="profiel.html">
+                <span class="avatar">K</span>
+                <span>Profiel</span>
+            </a>
+            <button class="menu-btn" id="menuBtn" type="button">☰</button>
+        </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a class="active" href="ontdek.html">Ontdek</a>
+        <a href="lessen.html">Lessen</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="plus.html">Plus</a>
+        <a href="profiel.html">Profiel</a>
+    </nav>
+
+    <main>
+        <section class="page-hero container reveal">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Ontdek</span>
+            </div>
+            <span class="eyebrow">KENNISBANK</span>
+            <h1>Ontdek wat er gebeurt <span class="gradient-text">onder de oppervlakte.</span></h1>
+            <p class="page-lead">
+                Van receptoren in de huid tot voorspellingen in je hersenen: hier vind je de uitgebreide KSite-kennisbank.
+            </p>
+        </section>
+
+        <section class="section compact container reveal">
+            <div class="search-panel">
+                <input
+                    id="knowledgeSearch"
+                    class="search-input"
+                    type="search"
+                    placeholder="Zoek in de kennisbank…"
+                    aria-label="Zoek in kennisbank"
+                >
+                <span class="btn secondary" id="knowledgeResultCount">9 onderwerpen</span>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">ONDERWERPEN</span>
+                    <h2>De complete kennisbank</h2>
+                </div>
+                <p>Gebruik de zoekbalk om snel te filteren op een begrip of onderwerp.</p>
+            </div>
+
+            <div class="topic-grid">
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">◎</span>
+                    <h3>Huidreceptoren</h3>
+                    <p>In je huid zitten gespecialiseerde receptoren en zenuwuiteinden die reageren op druk, beweging, trilling en andere mechanische prikkels.</p>
+                    <div class="topic-meta">
+                        <span>Basis</span>
+                        <span>5 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">↝</span>
+                    <h3>Zenuwbanen</h3>
+                    <p>Na registratie wordt informatie omgezet in elektrische signalen die via zenuwen en het ruggenmerg verder worden geleid.</p>
+                    <div class="topic-meta">
+                        <span>Zenuwstelsel</span>
+                        <span>7 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">◇</span>
+                    <h3>Hersenverwerking</h3>
+                    <p>Je brein verwerkt niet alleen waar en hoe sterk een prikkel is, maar combineert die informatie met aandacht, context en verwachting.</p>
+                    <div class="topic-meta">
+                        <span>Hersenen</span>
+                        <span>8 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">⚡</span>
+                    <h3>Reflexen</h3>
+                    <p>Sommige reacties lijken razendsnel en automatisch. Reflexachtige bewegingen kunnen helpen om je lichaam snel te laten reageren.</p>
+                    <div class="topic-meta">
+                        <span>Reacties</span>
+                        <span>6 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">⌁</span>
+                    <h3>Lichte aanraking</h3>
+                    <p>Zachte, bewegende aanraking kan anders worden verwerkt dan stevige druk. De precieze ervaring verschilt sterk per persoon.</p>
+                    <div class="topic-meta">
+                        <span>Tast</span>
+                        <span>6 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">◉</span>
+                    <h3>Aandacht</h3>
+                    <p>Waar je aandacht op gericht is kan beïnvloeden welke prikkels opvallen en hoe belangrijk je brein ze inschat.</p>
+                    <div class="topic-meta">
+                        <span>Psychologie</span>
+                        <span>5 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">↻</span>
+                    <h3>Voorspelling</h3>
+                    <p>Je hersenen voorspellen voortdurend de gevolgen van je eigen bewegingen. Daardoor kan zelf veroorzaakte aanraking minder verrassend zijn.</p>
+                    <div class="topic-meta">
+                        <span>Hersenen</span>
+                        <span>8 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">≈</span>
+                    <h3>Gewenning</h3>
+                    <p>Wanneer een prikkel vaak terugkomt, kan die soms minder opvallend worden. Het zenuwstelsel past zich voortdurend aan.</p>
+                    <div class="topic-meta">
+                        <span>Aanpassing</span>
+                        <span>6 min</span>
+                    </div>
+                </article>
+                <article class="topic-card" data-knowledge-card>
+                    <span class="topic-icon">♡</span>
+                    <h3>Grenzen en toestemming</h3>
+                    <p>Lichamelijk contact moet vrijwillig zijn. Een automatische reactie is geen toestemming; een nee- of stopsignaal betekent stoppen.</p>
+                    <div class="topic-meta">
+                        <span>Respect</span>
+                        <span>5 min</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">SNEL OVERZICHT</span>
+                    <h2>Van prikkel naar ervaring</h2>
+                </div>
+            </div>
+
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Stap</th>
+                        <th>Wat gebeurt er?</th>
+                        <th>Voorbeeld</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Registratie</td>
+                        <td>Receptoren reageren op mechanische verandering in of op de huid.</td>
+                        <td>Druk, beweging of trilling wordt gedetecteerd.</td>
+                    </tr>
+                    <tr>
+                        <td>2. Transductie</td>
+                        <td>De fysieke prikkel wordt omgezet in een elektrisch zenuwsignaal.</td>
+                        <td>Een zenuwvezel gaat signaleren.</td>
+                    </tr>
+                    <tr>
+                        <td>3. Geleiding</td>
+                        <td>Het signaal reist via perifere zenuwen richting ruggenmerg en hersenen.</td>
+                        <td>Informatie over plaats en sterkte wordt doorgegeven.</td>
+                    </tr>
+                    <tr>
+                        <td>4. Integratie</td>
+                        <td>De hersenen combineren de prikkel met verwachting, aandacht en eerdere informatie.</td>
+                        <td>Een onverwachte prikkel kan extra opvallen.</td>
+                    </tr>
+                    <tr>
+                        <td>5. Reactie</td>
+                        <td>Je kunt bewust of automatisch reageren, maar niet iedereen reageert hetzelfde.</td>
+                        <td>Beweging, lachen, schrikken of nauwelijks reageren.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section container reveal">
+            <div class="split-layout">
+                <article class="content-card large-card">
+                    <span class="eyebrow">VERDIEPING</span>
+                    <h2>Waarom is kietelen lastig in één definitie te vangen?</h2>
+                    <p>
+                        Het woord kietelen wordt in het dagelijks leven gebruikt voor verschillende soorten lichte,
+                        onverwachte of herhaalde aanraking. Wetenschappelijk gezien zijn daar meerdere systemen bij betrokken.
+                    </p>
+                    <p>
+                        Je ervaring hangt niet alleen af van wat er op de huid gebeurt. Verwachting, aandacht, relatie tot de situatie,
+                        eerdere ervaringen en individuele gevoeligheid spelen allemaal mee. Daarom bestaat er geen simpel knopje in het lichaam
+                        dat voor iedereen dezelfde kietelreactie veroorzaakt.
+                    </p>
+                    <p>
+                        KSite behandelt het onderwerp daarom als een combinatie van tastverwerking, voorspelling, gedrag en context.
+                    </p>
+                </article>
+                <aside class="fact-stack">
+                    <article class="mini-card">
+                        <span class="mini-label">KERNPUNT</span>
+                        <h3>Geen universele kaart</h3>
+                        <p>Algemene patronen bestaan, maar persoonlijke verschillen zijn belangrijker dan vaste lijstjes.</p>
+                    </article>
+                    <article class="mini-card">
+                        <span class="mini-label">KERNPUNT</span>
+                        <h3>Context telt mee</h3>
+                        <p>Dezelfde mechanische prikkel kan in verschillende situaties anders worden ervaren.</p>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">FEITEN</span>
+                    <h2>Wat je zeker moet onthouden</h2>
+                </div>
+            </div>
+            <div class="myth-grid">
+                <article class="myth-card">
+                    <span class="myth-badge fact">FEIT</span>
+                    <h3>Het brein voorspelt</h3>
+                    <p>Verwachtingen over je eigen bewegingen helpen je zenuwstelsel om binnenkomende signalen te interpreteren.</p>
+                </article>
+                <article class="myth-card">
+                    <span class="myth-badge fact">FEIT</span>
+                    <h3>Gevoeligheid varieert</h3>
+                    <p>Verschillen tussen mensen zijn normaal, en gevoeligheid kan ook binnen dezelfde persoon variëren.</p>
+                </article>
+                <article class="myth-card">
+                    <span class="myth-badge myth">FABEL</span>
+                    <h3>Lachen = toestemming</h3>
+                    <p>Een lachreactie kan automatisch zijn. Toestemming moet los daarvan duidelijk en vrijwillig zijn.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section container reveal">
+            <div class="cta-panel">
+                <div>
+                    <span class="eyebrow">GA VERDER</span>
+                    <h2>Maak van kennis een leerpad.</h2>
+                    <p>Volg de lessen voor meer structuur of test direct wat je al weet.</p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn primary" href="lessen.html">Naar lessen</a>
+                    <a class="btn secondary" href="quiz.html">Doe de quiz</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">K</span>
+                    <span class="brand-copy">
+                        <strong>KSite</strong>
+                        <small>Educatief platform</small>
+                    </span>
+                </a>
+                <p>Ontdek hoe tast, zenuwen en hersenverwerking samenwerken.</p>
+            </div>
+            <div class="footer-column">
+                <strong>Ontdekken</strong>
+                <a href="ontdek.html">Kennisbank</a>
+                <a href="lessen.html">Lessen</a>
+                <a href="quiz.html">Quiz</a>
+            </div>
+            <div class="footer-column">
+                <strong>Account</strong>
+                <a href="profiel.html">Profiel</a>
+                <a href="plus.html">KSite Plus</a>
+                <a href="plus-dashboard.html">Dashboard</a>
+            </div>
+            <div class="footer-column">
+                <strong>Techniek</strong>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© 2026 KSite</span>
+            <span>Educatieve demo • Geen medisch advies</span>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
